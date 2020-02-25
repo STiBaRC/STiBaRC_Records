@@ -1,0 +1,119 @@
+@import url(extra.css);
+*{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        -webkit-font-smoothing: antialiased;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(17, 68, 77);
+    color: white;
+}
+a {
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    align-items: center;
+    background-color: rgba(30, 97, 108, 0.88);
+    color: white;
+    box-shadow: 0px 2px 12px 0px rgba(77, 77, 77, 0.32);
+}
+nav .logo{
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    vertical-align: middle;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    padding: 1.2rem 0 1.2rem 0;
+}
+nav .container{
+    display: flex;
+    align-items: center;
+}
+nav .logo img{
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+}
+nav .links{
+    display: inline-block;
+    margin:0 0 0 12px;
+    vertical-align: middle;
+}
+nav .links a{
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 0 2px;
+    border-color: #42afbf;
+    border-style: solid;
+    border-width: 1px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+nav .links a.active{
+    background-color: #42afbf;
+}
+nav .links a:hover:not(.active){
+    background-color: rgba(66, 175, 191, 0.45);
+}
+.hero{
+    background: #0d2d33 url('../images/blue-record.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+}
+.vertical-center {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.title{
+    text-shadow: 0px 0px 12px rgba(0,0,0,0.5);
+    font-size: 3.25rem;
+}
+
+
+
+main{
+    margin:2rem 0 20rem 0;
+}
+
+/* footer */
+.page-footer {
+    color: #fff;
+    background-color: #2b7c88;
+    color: rgba(255,255,255,0.65);
+}
+.page-footer a{
+    color: inherit;
+}
+.page-footer .footer-copyright {
+    overflow: hidden;
+    min-height: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 10px 0px;
+/*    color: rgba(255, 255, 255, 0.8);*/
+    background-color: rgba(51, 51, 51, 0.08);
+}
