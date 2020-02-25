@@ -10,11 +10,14 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(17, 68, 77);
+    background-color: #11444d;
     color: white;
 }
 a {
     text-decoration: none;
+}
+img{
+    max-width: 100%;
 }
 nav{
     display: flex;
@@ -26,12 +29,19 @@ nav{
 nav .logo{
     display: flex;
     flex-grow: 1;
+    align-items: center;
     overflow: hidden;
     vertical-align: middle;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: bold;
     color: white;
     padding: 1.2rem 0 1.2rem 0;
+}
+.logo-img{
+    height: 2.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 nav .container{
     display: flex;
@@ -93,7 +103,7 @@ main{
 .page-footer {
     color: #fff;
     background-color: #2b7c88;
-    color: rgba(255,255,255,0.65);
+    color: rgba(255,255,255,0.75);
 }
 .page-footer a{
     color: inherit;
