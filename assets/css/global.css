@@ -74,6 +74,9 @@ nav .links a{
     text-decoration: none;
     color: white;
     border-radius: 5px;
+    -webkit-transition: background-color .15s ease-in-out;
+    -o-transition: background-color .15s ease-in-out;
+    transition: background-color .15s ease-in-out;
 }
 nav .links a.active{
     background-color: #42afbf;
@@ -132,7 +135,7 @@ nav .links a:focus:not(.active){
     border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover{ /* Handle on hover */
-    background: rgba(124, 167, 173, 0.85);
+    background: rgba(128, 172, 178, 0.85);
 }
 
 
@@ -149,6 +152,12 @@ nav .links a:focus:not(.active){
     padding: 14px;
     border-radius: 8px;
     max-width: 16%;
+    -webkit-transition: background-color .15s ease-in-out;
+    -o-transition: background-color .15s ease-in-out;
+    transition: background-color .15s ease-in-out;
+}
+.releases .album:hover{
+    background-color: #1b616d;
 }
 @media only screen and (max-width: 1024px){
     .releases .album{
