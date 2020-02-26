@@ -84,6 +84,20 @@ nav .links a:hover:not(.active){
 nav .links a:focus:not(.active){
     background-color: rgba(66, 175, 191, 0.5);
 }
+@media only screen and (max-width: 745px) {
+    .logo-img{
+        display: none!important;
+    }
+    nav .logo .text {
+        line-height: normal!important;
+    }
+}
+@media only screen and (max-width: 694px) {
+    nav .links{
+        white-space: nowrap;
+        overflow-x: scroll;
+    }
+}
 .hero{
     background: #0d2d33 url('../images/blue-record.jpg') no-repeat center center;
     background-size: cover;
@@ -104,10 +118,115 @@ nav .links a:focus:not(.active){
     margin: 0 8px;
 }
 
+/* scrollbar */
+::-webkit-scrollbar{ /* width */
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track{ /* Track */
+    background: rgba(59, 96, 103, 0.9);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb{ /* Handle */
+    background: rgba(117, 157, 163, 0.85);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover{ /* Handle on hover */
+    background: rgba(124, 167, 173, 0.85);
+}
+
+
+/* main stuffs */
+.releases{
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.releases .album{
+    display: inline-block;
+    color: white;
+    margin: 0 4px .5rem 0;
+    background-color: #185a65;
+    padding: 14px;
+    border-radius: 8px;
+    max-width: 16%;
+}
+@media only screen and (max-width: 1024px){
+    .releases .album{
+        max-width: 20%;
+    }
+}
+@media only screen and (max-width: 920px){
+    .releases .album{
+        max-width: 22%;
+    }
+}
+@media only screen and (max-width: 835px){
+    .releases .album{
+        max-width: 24%;
+    }
+}
+@media only screen and (max-width: 760px){
+    .releases .album{
+        max-width: 26%;
+    }
+}
+@media only screen and (max-width: 680px){
+    .releases .album{
+        max-width: 28%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .releases .album{
+        max-width: 35%;
+    }
+}
+@media only screen and (max-width: 480px){
+    .releases .album{
+        max-width: 40%;
+    }
+}
+.releases .artwork{
+    width: 100%;
+    display: inline-block;
+}
+.releases .name{
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: .5rem 0 0 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.releases .pfp{
+    max-height: 25px;
+    max-width: 25px;
+    border-radius: 50px;
+}
+
+/* artists */
+.artists .person{
+    color: white;
+    display: inline-block;
+    margin: 0 8px 1rem 0;
+}
+.artists .person .name{
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: .5rem 0 0 0;
+}
+.artists .pfp{
+    max-height: 150px;
+    max-width: 150px;
+    border-radius: 50%;
+}
+
 
 
 main{
-    margin:2rem 0 20rem 0;
+    margin:2rem 0 6rem 0;
+    min-height: 65vh;
 }
 
 /* footer */
@@ -139,21 +258,3 @@ main{
     background-color: rgba(51, 51, 51, 0.08);
 }
 
-@media only screen and (max-width: 745px) {
-    .logo-img{
-        display: none!important;
-    }
-    nav .logo .text {
-        line-height: normal!important;
-    }
-}
-@media only screen and (max-width: 694px) {  
-    nav .links a{
-/*        margin: 0 2px 4px 2px!important;*/
-        
-    }
-    nav .links{
-        white-space: nowrap;
-        overflow-x: scroll;
-    }
-}
