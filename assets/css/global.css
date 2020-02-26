@@ -21,14 +21,20 @@ img{
 }
 nav{
     display: flex;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    z-index: 9999;
     align-items: center;
-    background-color: rgba(30, 97, 108, 0.88);
+    background-color: rgba(30, 97, 108, 0.92);
     color: white;
     box-shadow: 0px 2px 12px 0px rgba(77, 77, 77, 0.32);
 }
-nav .logo{
+nav .flex-grow{
     display: flex;
     flex-grow: 1;
+}
+nav .logo{
     align-items: center;
     overflow: hidden;
     vertical-align: middle;
@@ -39,18 +45,19 @@ nav .logo{
 }
 .logo-img{
     height: 2.5rem;
+    margin-right: 8px;
     display: inline-block;
     vertical-align: middle;
-    margin-right: 8px;
+}
+nav .logo .text{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    line-height: 0;
 }
 nav .container{
     display: flex;
     align-items: center;
-}
-nav .logo img{
-    display: inline-block;
-    vertical-align: middle;
-    color: white;
 }
 nav .links{
     display: inline-block;
@@ -60,7 +67,7 @@ nav .links{
 nav .links a{
     display: inline-block;
     padding: 12px 20px;
-    margin: 0 2px;
+    margin: 0 2px 0 2px;
     border-color: #42afbf;
     border-style: solid;
     border-width: 1px;
@@ -72,7 +79,10 @@ nav .links a.active{
     background-color: #42afbf;
 }
 nav .links a:hover:not(.active){
-    background-color: rgba(66, 175, 191, 0.45);
+    background-color: rgba(66, 175, 191, 0.35);
+}
+nav .links a:focus:not(.active){
+    background-color: rgba(66, 175, 191, 0.5);
 }
 .hero{
     background: #0d2d33 url('../images/blue-record.jpg') no-repeat center center;
@@ -89,8 +99,9 @@ nav .links a:hover:not(.active){
     transform: translateY(-50%);
 }
 .title{
-    text-shadow: 0px 0px 12px rgba(0,0,0,0.5);
+    text-shadow: 0px 0px 12px rgba(0,0,0,0.75);
     font-size: 3.25rem;
+    margin: 0 8px;
 }
 
 
@@ -126,4 +137,23 @@ main{
     padding: 10px 0px;
 /*    color: rgba(255, 255, 255, 0.8);*/
     background-color: rgba(51, 51, 51, 0.08);
+}
+
+@media only screen and (max-width: 745px) {
+    .logo-img{
+        display: none!important;
+    }
+    nav .logo .text {
+        line-height: normal!important;
+    }
+}
+@media only screen and (max-width: 694px) {  
+    nav .links a{
+/*        margin: 0 2px 4px 2px!important;*/
+        
+    }
+    nav .links{
+        white-space: nowrap;
+        overflow-x: scroll;
+    }
 }
