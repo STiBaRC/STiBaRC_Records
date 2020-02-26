@@ -138,6 +138,43 @@ nav .links a:focus:not(.active){
     background: rgba(128, 172, 178, 0.85);
 }
 
+/* buttons */
+.button{
+    display: inline-block;
+    padding: 11px 19px;
+    margin: 0 2px 0 2px;
+    text-decoration: none;
+    background-color: #3ca6b5;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-transition: background-color .15s ease-in-out;
+    -o-transition: background-color .15s ease-in-out;
+    transition: background-color .15s ease-in-out;
+}
+.button:hover{
+    background-color: #44b4c4;
+}
+.button:active{
+    background-color: #389fad;
+}
+.button:focus{
+    background-color: #3799a7;
+}
+.button.outline{
+    padding: 10px 18px;
+    background-color: transparent;
+    border-color: #42afbf;
+    border-style: solid;
+    border-width: 1px;
+}
+.button.outline:hover{
+    background-color: rgba(66, 175, 191, 0.35);
+}
+.button.outline:focus,.button.outline:active{
+    background-color: rgba(66, 175, 191, 0.5);
+}
+
 
 /* main stuffs */
 .releases{
