@@ -8,7 +8,7 @@
             }
         },
         "artwork":{
-            "full":"assets/images/releases/Golden_Days.png"
+            "full":"/assets/images/releases/Golden_Days.png"
         }
     },
     "2":{
@@ -20,67 +20,7 @@
             }
         },
         "artwork":{
-            "full":"assets/images/releases/SA-46_Dreams.jpg"
-        }
-    },
-    "3":{
-        "name":"Golden Days",
-        "artists":{
-            "1":{
-                "id":"1",
-                "username":"Verso"
-            }
-        },
-        "artwork":{
-            "full":"assets/images/releases/Golden_Days.png"
-        }
-    },
-    "4":{
-        "name":"SA-46 Dreams",
-        "artists":{
-            "1":{
-                "id":"2",
-                "username":"Bunnbuns"
-            }
-        },
-        "artwork":{
-            "full":"assets/images/releases/SA-46_Dreams.jpg"
-        }
-    },
-    "5":{
-        "name":"SA-46 Dreams",
-        "artists":{
-            "1":{
-                "id":"2",
-                "username":"Bunnbuns"
-            }
-        },
-        "artwork":{
-            "full":"assets/images/releases/SA-46_Dreams.jpg"
-        }
-    },
-    "6":{
-        "name":"Golden Days",
-        "artists":{
-            "1":{
-                "id":"1",
-                "username":"Verso"
-            }
-        },
-        "artwork":{
-            "full":"assets/images/releases/Golden_Days.png"
-        }
-    },
-    "7":{
-        "name":"SA-46 Dreams",
-        "artists":{
-            "1":{
-                "id":"2",
-                "username":"Bunnbuns"
-            }
-        },
-        "artwork":{
-            "full":"assets/images/releases/SA-46_Dreams.jpg"
+            "full":"/assets/images/releases/SA-46_Dreams.jpg"
         }
     }
 }

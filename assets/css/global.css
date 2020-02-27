@@ -27,7 +27,7 @@ nav{
     overflow: hidden;
     z-index: 9999;
     align-items: center;
-    background-color: rgba(32, 103, 114, 0.92);
+    background-color: rgba(32, 103, 114, 1);
     color: white;
     box-shadow: 0px 2px 12px 0px rgba(77, 77, 77, 0.32);
 }
@@ -140,6 +140,23 @@ nav .links a:focus:not(.active){
     background: rgba(128, 172, 178, 0.85);
 }
 
+/* hr */
+hr{
+    display: block;
+    height: 0;
+    margin: 15px 0;
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+hr.md{
+    margin: 25px 0;
+}
+hr.lg{
+    margin: 50px 0;
+}
+
 /* buttons */
 .button{
     display: inline-block;
@@ -153,6 +170,10 @@ nav .links a:focus:not(.active){
     -webkit-transition: background-color .15s ease-in-out;
     -o-transition: background-color .15s ease-in-out;
     transition: background-color .15s ease-in-out;
+}
+.button.large{
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 .button:hover{
     background-color: #44b4c4;

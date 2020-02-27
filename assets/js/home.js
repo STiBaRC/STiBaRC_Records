@@ -43,8 +43,9 @@ function loadReleases(type){
 		for (var i = 1; i < Object.keys(tmp).length+1; i++) {
 			release(i,tmp[i]);
         }
-        if(type == "home"){
+        if(Object.keys(tmp).length > 6){
             $('releases').innerHTML = releaseList + '<span class="album-button album-width"> <a class="button" href="releases.html">View All</a> </span>';
+            $('releases-more').style.display = "none";
         }else{
             $('releases').innerHTML = releaseList;
         }

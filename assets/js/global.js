@@ -6,5 +6,5 @@ function $(id){  //less typing
     }
 }
 
-var releasesUrl = "releases.json";
-var artistsUrl = "artists.json";
+var releasesUrl = "../releases.json";
+var artistsUrl = "../artists.json";

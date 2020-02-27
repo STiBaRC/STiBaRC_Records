@@ -4,13 +4,13 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
-        <link rel="icon" type="image/png" href="assets/images/logo.png">
+        <link rel="icon" type="image/png" href="./assets/images/logo.png">
         
         <title>STiBaRC Records</title>
         
         <!-- CSS -->
-        <link rel="stylesheet" href="assets/css/global.css">
-        <link rel="stylesheet" href="assets/css/home.css">
+        <link rel="stylesheet" href="./assets/css/global.css">
+        <link rel="stylesheet" href="./assets/css/home.css">
         
         <!-- Fonts -->
     	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -27,15 +27,15 @@
             <nav class="">
                 <div class="container">
                     <span class="flex-grow">
-                        <a class="logo" href="/">
-                            <img class="logo-img" src="assets/images/logo-white.svg"><span class="text">STiBaRC Records</span>
+                        <a class="logo" href="./">
+                            <img class="logo-img" src="./assets/images/logo-white.svg"><span class="text">STiBaRC Records</span>
                         </a>
                     </span>
                     <span class="links">
-                        <a class="active" href="/">Home</a>
-                        <a class="" href="releases.html">Releases</a>
-                        <a class="" href="/">Contact</a>
-                        <a class="" href="/">About</a>
+                        <a class="active" href="./">Home</a>
+                        <a class="" href="./releases/">Releases</a>
+                        <a class="" href="#">Contact</a>
+                        <a class="" href="./about/">About</a>
                     </span>
                 </div>
             </nav>
@@ -48,17 +48,36 @@
         
         <main>
             <div class="container">
+                
+                <section>
+                    
+                    <div class="flow-text" style="margin:3rem 0 0 0;">
+                        <p>We label the music that other record labels won't label!</p>
+                        <p>Take a look for yourself, and you'll find all sorts of genres with varying quality. Brought to you by the STiBaRC Team.</p>
+                    </div>
 
+                    <div>
+                        <a class="button large" href="./about/">Read more</a>
+                    </div>
+
+                    <br>
+                
+                </section>
+                
+                <hr style="margin: 1.5rem 0 2rem 0">
+                
                 <h1>New Releases</h1>
 
                 <section style="margin: 0 0 2rem 0;">
                     
                     <div class="releases" id="releases">
                         
-                        <span class="album-button album-width">
-                            <a class="button" href="releases.html">View All</a>
-                        </span>
+                        <!-- oop -->
                         
+                    </div>
+                    
+                    <div id="releases-more" style="display: block; margin-top: 1rem;">
+                        <a class="button" href="./releases/">View All</a>
                     </div>
                     
                 </section>
@@ -89,8 +108,8 @@
             </div>
         </footer>
         
-        <script src="assets/js/global.js"></script>
-        <script src="assets/js/home.js"></script>
+        <script src="./assets/js/global.js"></script>
+        <script src="./assets/js/home.js"></script>
         <script>
             loadReleases('home');
             loadArtists('home');
