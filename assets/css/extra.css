@@ -5,6 +5,13 @@
   width: calc(100% - 14px);
 }
 
+/* clear fix */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 @media only screen and (min-width: 601px) {
   .container {
     width: 95%;
