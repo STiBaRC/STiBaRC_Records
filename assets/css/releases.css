@@ -12,7 +12,7 @@ main{
     display: inline-block;
     vertical-align: middle;
     color: white;
-    margin: 0 4px .5rem 0;
+    margin: 0 8px 8px 0;
     background-color: #185a65;
     padding: 14px;
     border-radius: 8px;
@@ -28,46 +28,46 @@ main{
 }
 
 .album-width{
-    max-width: 16%;
+    max-width: 22%;
 }
 @media only screen and (max-width: 1199px){
     .album-width{
-        max-width: 18%;
+        max-width: 25%;
     }
 }
 @media only screen and (max-width: 1024px){
     .album-width{
-        max-width: 20%;
+        max-width: 26%;
     }
 }
 @media only screen and (max-width: 920px){
     .album-width{
-        max-width: 22%;
+        max-width: 27%;
     }
 }
 @media only screen and (max-width: 835px){
     .album-width{
-        max-width: 24%;
-    }
-}
-@media only screen and (max-width: 760px){
-    .album-width{
-        max-width: 26%;
-    }
-}
-@media only screen and (max-width: 680px){
-    .album-width{
         max-width: 28%;
     }
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 765px){
     .album-width{
         max-width: 35%;
     }
 }
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 680px){
     .album-width{
         max-width: 40%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .album-width{
+        max-width: 42%;
+    }
+}
+@media only screen and (max-width: 501px){
+    .album-width{
+        max-width: 100%;
     }
 }
 .releases .artwork{
@@ -109,7 +109,9 @@ main{
     background-color: #175762;
 }
 
-/* artists */
+
+/*
+ artists 
 .artists .person{
     color: white;
     display: inline-block;
@@ -126,4 +128,4 @@ main{
     width: 150px;
     background: #175762;
     border-radius: 50%;
-}
+}*/
