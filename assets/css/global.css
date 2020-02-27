@@ -26,11 +26,11 @@ nav{
     overflow: hidden;
     z-index: 9999;
     align-items: center;
-    background-color: rgba(30, 97, 108, 0.92);
+    background-color: rgba(32, 103, 114, 0.92);
     color: white;
     box-shadow: 0px 2px 12px 0px rgba(77, 77, 77, 0.32);
 }
-nav .flex-grow{
+.flex-grow{
     display: flex;
     flex-grow: 1;
 }
@@ -177,18 +177,23 @@ nav .links a:focus:not(.active){
 
 
 /* main stuffs */
+main{
+    margin:2rem 0 6rem 0;
+    min-height: 65vh;
+}
+/* releases */
 .releases{
     overflow-x: scroll;
     white-space: nowrap;
 }
 .releases .album{
     display: inline-block;
+    vertical-align: middle;
     color: white;
     margin: 0 4px .5rem 0;
     background-color: #185a65;
     padding: 14px;
     border-radius: 8px;
-    max-width: 16%;
     -webkit-transition: background-color .15s ease-in-out;
     -o-transition: background-color .15s ease-in-out;
     transition: background-color .15s ease-in-out;
@@ -196,44 +201,59 @@ nav .links a:focus:not(.active){
 .releases .album:hover{
     background-color: #1b616d;
 }
+.releases .album:focus,.releases .album:active{
+    background-color: #175762;
+}
+
+.album-width{
+    max-width: 16%;
+}
+@media only screen and (max-width: 1199px){
+    .album-width{
+        max-width: 18%;
+    }
+}
 @media only screen and (max-width: 1024px){
-    .releases .album{
+    .album-width{
         max-width: 20%;
     }
 }
 @media only screen and (max-width: 920px){
-    .releases .album{
+    .album-width{
         max-width: 22%;
     }
 }
 @media only screen and (max-width: 835px){
-    .releases .album{
+    .album-width{
         max-width: 24%;
     }
 }
 @media only screen and (max-width: 760px){
-    .releases .album{
+    .album-width{
         max-width: 26%;
     }
 }
 @media only screen and (max-width: 680px){
-    .releases .album{
+    .album-width{
         max-width: 28%;
     }
 }
 @media only screen and (max-width: 600px){
-    .releases .album{
+    .album-width{
         max-width: 35%;
     }
 }
 @media only screen and (max-width: 480px){
-    .releases .album{
+    .album-width{
         max-width: 40%;
     }
 }
 .releases .artwork{
     width: 100%;
     display: inline-block;
+    background-color: #184048;
+    -webkit-box-shadow: 0 2px 7px 0 rgba(0,0,0,.3), 0 1px 2px 0 rgba(0,0,0,.2);
+    box-shadow: 0 2px 7px 0 rgba(0,0,0,.3), 0 1px 2px 0 rgba(0,0,0,.2);
 }
 .releases .name{
     color: white;
@@ -249,12 +269,27 @@ nav .links a:focus:not(.active){
     max-width: 25px;
     border-radius: 50px;
 }
+.releases .album-button{
+    margin-right: .75rem;
+}
+.releases .album-button .button{
+    background-color: #185a65;
+    -webkit-transition: background-color .15s ease-in-out;
+    -o-transition: background-color .15s ease-in-out;
+    transition: background-color .15s ease-in-out;
+}
+.releases .album-button .button:hover{
+    background-color: #1b616d;
+}
+.releases .album-button .button:focus,.releases .album-button .button:active{
+    background-color: #175762;
+}
 
 /* artists */
 .artists .person{
     color: white;
     display: inline-block;
-    margin: 0 8px 1rem 0;
+    margin: 0 12px 1rem 0;
 }
 .artists .person .name{
     color: white;
@@ -270,20 +305,19 @@ nav .links a:focus:not(.active){
 
 
 
-main{
-    margin:2rem 0 6rem 0;
-    min-height: 65vh;
-}
 
 /* footer */
 .page-footer {
-    color: #fff;
     background-color: #2b7c88;
-    color: rgba(255,255,255,0.75);
+    color: rgba(255,255,255,0.77);
 }
 .page-footer a{
-    color: inherit;
+    color: rgba(255,255,255,0.77);
 }
+.page-footer a:hover,.page-footer a:focus{
+    color: rgba(255,255,255,0.84);
+}
+    
 .page-footer .footer-copyright {
     overflow: hidden;
     min-height: 50px;
