@@ -122,7 +122,8 @@ nav .links a:focus:not(.active){
 }
 .hero{
     position: relative;
-    background: #0d2d33 url('../images/blue-record.jpg') no-repeat center center;
+    /* credit to https://unsplash.com/@black_onion for blue vinyl image */
+    background: #275c85 url('../images/blue-record.jpg') no-repeat center center;
     background-size: cover;
     color: white;
     min-height: 100vh;
