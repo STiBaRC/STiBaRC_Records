@@ -6,5 +6,7 @@ function $(id){  //less typing
     }
 }
 
-var releasesUrl = "/releases.json";
-var artistsUrl = "/artists.json";
+var baseUrl = "https://stibarc.github.io/STiBaRC_Records/";
+
+var releasesUrl = baseUrl+"releases.json";
+var artistsUrl = baseUrl+"artists.json";

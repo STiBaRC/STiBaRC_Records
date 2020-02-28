@@ -135,7 +135,7 @@ nav .links a:focus:not(.active){
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-.title{
+.hero .title{
     text-shadow: 0px 0px 12px rgba(0,0,0,0.75);
     font-size: 3.25rem;
     margin: 0 8px;
@@ -273,6 +273,9 @@ hr.lg{
 main{
     margin:5.25rem 0 6.5rem 0;
     min-height: 70vh;
+}
+.title{
+    font-size: 2.75rem;
 }
 
 
