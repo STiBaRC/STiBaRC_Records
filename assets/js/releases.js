@@ -11,7 +11,9 @@ function release(id, item){
             artists += item['artists'][i]['username'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
         }
         var artwork = item['artwork']['500px'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        releaseList += '<a class="album album-width" href="#"> <img class="artwork" src="'+artwork+'" title="'+name +' - '+artists+'"> <div class="name">'+name+' - '+artists+'</div> </a>';
+        var year = item['year'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        
+        releaseList += '<a class="album album-width" href="#"> <img class="artwork" src="'+artwork+'" title="'+name +' - '+artists+'"> <div class="name">'+name+' - '+artists+' <div class="year">'+year+'</div> </div> </a>';
     }catch (err){
         console.log(err);
     }

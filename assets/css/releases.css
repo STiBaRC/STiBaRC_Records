@@ -133,11 +133,23 @@ main{
 }
 .releases .name{
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+/* module */
+.releases.view_module .year{
+    margin-top: .5rem;
+}
+/* list */
+.releases.view_list .year{
+    margin-top: .25rem;
+}
+.releases .year{
+    color: rgba(255,255,255,0.5);
+    font-weight: 400;
 }
 
 
