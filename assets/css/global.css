@@ -172,8 +172,7 @@ hr.lg{
     transition: background-color .15s ease-in-out;
 }
 .button.large{
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.15rem;
 }
 .button:hover{
     background-color: #44b4c4;
