@@ -13,8 +13,18 @@ body{
     background-color: #11444d;
     color: white;
 }
-a {
+a{
     text-decoration: none;
+    color: #4cbac9;
+}
+a:hover{
+    color: #55c6d4;
+}
+a:active{
+    color: #48b0bf;
+}
+a:focus{
+    color: #46a6b4;
 }
 img{
     max-width: 100%;
@@ -181,6 +191,7 @@ hr.lg{
     text-decoration: none;
     background-color: #3ca6b5;
     color: white;
+    text-align: center;
     border-radius: 5px;
     cursor: pointer;
     -webkit-transition: background-color .15s ease-in-out;
@@ -195,12 +206,15 @@ hr.lg{
     padding: 8px 16px;
 }
 .button:hover{
+    color: white;
     background-color: #44b4c4;
 }
 .button:active{
+    color: white;
     background-color: #389fad;
 }
 .button:focus{
+    color: white;
     background-color: #3799a7;
 }
 .button.outline{

@@ -1,0 +1,20 @@
+.branding{
+    
+}
+.branding .image{
+    display: inline-block;
+    vertical-align: top;
+    max-width: 250px;
+    margin: 0 8px 10px 0;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 8px;
+    border-radius: 5px;
+}
+.branding .image .info{
+    display: block;
+    margin-bottom: .5rem;
+}
+.branding .image .download{
+    display: block;
+    margin-top: .5rem;
+}
