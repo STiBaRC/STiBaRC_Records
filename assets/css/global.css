@@ -138,7 +138,8 @@ nav .links a:focus:not(.active){
 .hero .title{
     margin: 0 8px;
     font-size: 3.45rem;
-    text-shadow: 0px 0px 12px rgba(0,0,0,0.8);
+    font-weight: 500;
+    text-shadow: 0px 0px 12px rgba(0,0,0,0.7);
 }
 .noselect {
     -webkit-touch-callout: none;
