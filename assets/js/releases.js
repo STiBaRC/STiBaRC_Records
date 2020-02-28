@@ -30,17 +30,47 @@ function loadReleases(type){
     xhttp.send();
 }
 /* view options */
-var viewOption = "view_module";
-$('releases').classList.add(viewOption);
+var getViewOption = sessionStorage.getItem('viewOption');
+if(getViewOption == null){
+    // view option not set, so use module view
+    console.log('view option not set, so setting to module_view');
+    var viewOption = "view_module";
+    $('releases').classList.add(viewOption);
+    // set storage to use module view
+    sessionStorage.setItem('viewOption', 'view_module');
+}else{
+    // view option is set, so use it
+    var viewOption = getViewOption;
+    $('releases').classList.add(getViewOption);
+    if(viewOption == "view_list"){
+        
+        $('view-option').innerHTML = "view_module";
+        
+    }else{
+        
+        $('view-option').innerHTML = "view_list";
+        
+    }
+}
 function changeView(){
     $('releases').classList.remove(viewOption);
+    
     if(viewOption == "view_list"){
+        
         viewOption = "view_module";
         $('view-option').innerHTML = "view_list";
+        
     }else{
+        
         viewOption = "view_list";
         $('view-option').innerHTML = "view_module";
+        
     }
     $('releases').classList.add(viewOption);
+    sessionStorage.setItem('viewOption', viewOption);
 }
 $("view-option").addEventListener("click", changeView);
+
+
+
+/* page load */
