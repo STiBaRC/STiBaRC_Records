@@ -45,7 +45,6 @@ main{
 /* list */
 .releases.view_list .album{
     display: block;
-    width: 100%;
     padding: 8px;
     margin: 0 0 2px 0;
     border-radius: 2px;
