@@ -3,7 +3,6 @@
         "name":"Golden Days",
         "artists":{
             "1":{
-                "id":"1",
                 "username":"Verso"
             }
         },
@@ -19,7 +18,6 @@
         "name":"SA-46 Dreams",
         "artists":{
             "1":{
-                "id":"2",
                 "username":"Bunnbuns"
             }
         },
@@ -35,15 +33,12 @@
         "name":"Cool Test",
         "artists":{
             "1":{
-                "id":"3",
-                "username":"Herronjo"
+                "username":"herronjo"
             },
             "2":{
-                "id":"1",
                 "username":"Verso"
             },
             "3":{
-                "id":"2",
                 "username":"Bunnbuns"
             }
         },

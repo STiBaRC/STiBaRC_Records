@@ -4,7 +4,7 @@ function artist(id, item){
     try{
         var username = item['username'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
         var pfp = pfpPath + item['pfp'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        artistList += '<a class="person" href="#"> <img class="pfp" src="'+pfp+'"> <div class="name center">'+username+'</div> </a>';
+        artistList += '<span class="person"> <img class="pfp" src="'+pfp+'"> <div class="name center">'+username+'</div> </span>';
     }catch (err){
         console.log(err);
     }

@@ -14,6 +14,7 @@ var baseUrl = "https://stibarc.github.io/STiBaRC_Records/";
 
 if(devMode){
     baseAPI = devBaseUrl;
+    baseUrl = devBaseUrl;
 }else{
     baseAPI = baseUrl;
 }
