@@ -8,7 +8,9 @@
             }
         },
         "artwork":{
-            "full":"/assets/images/releases/Golden_Days.png"
+            "full":"/assets/images/releases/Golden_Days.png",
+            "500px":"/assets/images/releases/Golden_Days-500px.jpg",
+            "200px":"/assets/images/releases/Golden_Days-200px.jpg"
         }
     },
     "2":{
@@ -20,7 +22,81 @@
             }
         },
         "artwork":{
-            "full":"/assets/images/releases/SA-46_Dreams.jpg"
+            "full":"/assets/images/releases/SA-46_Dreams.jpg",
+            "500px":"/assets/images/releases/SA-46_Dreams-500px.jpg",
+            "200px":"/assets/images/releases/SA-46_Dreams-200px.jpg"
+        }
+    },
+    "3":{
+        "name":"Test A",
+        "artists":{
+            "1":{
+                "id":"5",
+                "username":"Herronjo"
+            },
+            "2":{
+                "id":"2",
+                "username":"Bunnbuns"
+            }
+        },
+        "artwork":{
+            "full":"/assets/images/releases/Test_A.jpg",
+            "500px":"/assets/images/releases/Test_A-500px.jpg",
+            "200px":"/assets/images/releases/Test_A-200px.jpg"
+        }
+    },
+    "4":{
+        "name":"Windows",
+        "artists":{
+            "1":{
+                "id":"3",
+                "username":"Test"
+            },
+            "2":{
+                "id":"4",
+                "username":"Another Name"
+            }
+        },
+        "artwork":{
+            "full":"/assets/images/releases/pabalt_(test).jpg",
+            "500px":"/assets/images/releases/pabalt_(test).jpg",
+            "200px":"/assets/images/releases/pabalt_(test).jpg"
+        }
+    },
+    "5":{
+        "name":"Bruh",
+        "artists":{
+            "1":{
+                "id":"3",
+                "username":"Test"
+            },
+            "2":{
+                "id":"4",
+                "username":"Another Name"
+            }
+        },
+        "artwork":{
+            "full":"/assets/images/releases/pabalt_(test).jpg",
+            "500px":"/assets/images/releases/pabalt_(test).jpg",
+            "200px":"/assets/images/releases/pabalt_(test).jpg"
+        }
+    },
+    "6":{
+        "name":"E",
+        "artists":{
+            "1":{
+                "id":"3",
+                "username":"Test"
+            },
+            "2":{
+                "id":"4",
+                "username":"Another Name"
+            }
+        },
+        "artwork":{
+            "full":"/assets/images/releases/pabalt_(test).jpg",
+            "500px":"/assets/images/releases/pabalt_(test).jpg",
+            "200px":"/assets/images/releases/pabalt_(test).jpg"
         }
     }
 }

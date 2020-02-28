@@ -104,7 +104,7 @@ main{
     border-radius: 50px;
 }
 .releases .album-button{
-    margin-right: .75rem;
+    margin: 0 .75rem 0 .25rem;
 }
 .releases .album-button .button{
     background-color: #185a65;
