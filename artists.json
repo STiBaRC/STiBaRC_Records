@@ -1,10 +1,10 @@
 {
     "1":{
     "username":"Verso",
-    "pfp":"/assets/images/pfp/verso.jpg"
+    "pfp":"pfp/verso.jpg"
     },
     "2":{
         "username":"Bunnbuns",
-        "pfp":"/assets/images/pfp/bunnbuns.jpg"
+        "pfp":"pfp/bunnbuns.jpg"
     }
 }

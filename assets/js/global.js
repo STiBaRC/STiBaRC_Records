@@ -7,7 +7,7 @@ function $(id){  //less typing
 }
 
 // set devMode to false in production //
-var devMode = false;
+var devMode = true;
 
 var devBaseUrl = "/";
 var baseUrl = "https://stibarc.github.io/STiBaRC_Records/";
@@ -20,3 +20,5 @@ if(devMode){
 
 var releasesUrl = baseAPI+"releases.json";
 var artistsUrl = baseAPI+"artists.json";
+var artworkPath = baseUrl+"assets/images/";
+var pfpPath = baseUrl+"assets/images/";

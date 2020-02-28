@@ -3,7 +3,7 @@ var artistList = "";
 function artist(id, item){
     try{
         var username = item['username'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        var pfp = item['pfp'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        var pfp = pfpPath + item['pfp'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
         artistList += '<a class="person" href="#"> <img class="pfp" src="'+pfp+'"> <div class="name center">'+username+'</div> </a>';
     }catch (err){
         console.log(err);
@@ -35,7 +35,7 @@ function release(id, item){
             }
             artists += item['artists'][i]['username'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
         }
-        var artwork = item['artwork']['500px'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        var artwork = artworkPath + item['artwork']['500px'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
         releaseList += '<a class="album album-width" href="#" title="'+name +' - '+artists+'"> <img class="artwork" src="'+artwork+'"> <div class="name">'+name+' - '+artists+'</div> </a>';
     }catch (err){
         console.log(err);
