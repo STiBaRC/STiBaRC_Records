@@ -49,11 +49,11 @@ function loadReleases(type){
 		for (var i = 1; i < Object.keys(tmp).length+1; i++) {
 			release(i,tmp[i]);
         }
-        if(Object.keys(tmp).length > 5){
-            $('releases').innerHTML = releaseList + '<span class="album-button album-width"> <a class="button" href="./releases/">View All</a> </span>';
-//            $('releases-more').style.display = "none";
+        $('releases').innerHTML = releaseList + '<span id="release-more-btn" class="album-button album-width" style="display: none;"> <a class="button big" href="./releases/">View All</a> </span>';
+        if(Object.keys(tmp).length >= 4){
+            $('release-more-btn').style.display = "inline-block";
         }else{
-            $('releases').innerHTML = releaseList;
+            $('release-more-btn').style.display = "none";
         }
     };
     xhttp.open("GET", releasesUrl, true);

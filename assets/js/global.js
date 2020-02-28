@@ -6,5 +6,5 @@ function $(id){  //less typing
     }
 }
 
-var releasesUrl = "https://bunnbuns.net/~tmp/releases.json";
-var artistsUrl = "https://bunnbuns.net/~tmp/artists.json";
+var releasesUrl = "/releases.json";
+var artistsUrl = "/artists.json";

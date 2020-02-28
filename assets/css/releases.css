@@ -15,8 +15,7 @@
 
 /* main stuffs */
 main{
-    margin:5.5rem 0 6.5rem 0;
-    min-height: 70vh;
+    margin: 4.25rem 0 7.5rem 0;
 }
 
 
@@ -24,6 +23,7 @@ main{
 .releases{
     
 }
+/* module */
 .releases.view_module .album{
     display: inline-block;
     vertical-align: middle;
@@ -32,17 +32,29 @@ main{
     background-color: #185a65;
     padding: 14px;
     border-radius: 8px;
+}
+/* list */
+.releases.view_list .album{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 0 0 2px 0;
+    border-radius: 2px;
+}
+.releases .album{
+    color: white;
+    background-color: #185a65;
     -webkit-transition: background-color .15s ease-in-out;
     -o-transition: background-color .15s ease-in-out;
     transition: background-color .15s ease-in-out;
 }
-.releases.view_module .album:hover{
+.releases .album:hover{
     background-color: #1b616d;
 }
-.releases.view_module .album:focus,.releases.view_module .album:active{
+.releases .album:focus,.releases .album:active{
     background-color: #1e6774;
 }
-
+/* module */
 .view_module .album-width{
     max-width: 22%;
 }
@@ -86,28 +98,39 @@ main{
         max-width: 100%;
     }
 }
+/* module */
 .releases.view_module .artwork{
     width: 100%;
-    min-height: 100px;
     display: inline-block;
-    background-color: #184048;
     -webkit-box-shadow: 0 2px 6px 0 rgba(0,0,0,.25), 0 1px 2px 0 rgba(0,0,0,.15);
     box-shadow: 0 2px 6px 0 rgba(0,0,0,.25), 0 1px 2px 0 rgba(0,0,0,.15);
 }
+/* list */
+.releases.view_list .artwork{
+    display: inline-block;
+    vertical-align: middle;
+    width: 150px;
+    margin-right: 4px;
+}
+.releases .artwork{
+    background-color: #184048;
+}
+/* module */
 .releases.view_module .name{
+    margin: .5rem 0 0 0;
+}
+/* list */
+.releases.view_list .name{
+    display: inline-block;
+    vertical-align: middle;
+}
+.releases .name{
     color: white;
     font-weight: 500;
     font-size: 1rem;
-    margin: .5rem 0 0 0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-}
-.releases .pfp{
-    height: 25px;
-    width: 25px;
-    background: #175762;
-    border-radius: 50px;
 }
 
 
