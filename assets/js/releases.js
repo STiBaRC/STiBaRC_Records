@@ -30,13 +30,16 @@ function loadReleases(type){
     xhttp.send();
 }
 /* view options */
-var viewOption = "view_list";
+var viewOption = "view_module";
+$('releases').classList.add('view_module');
 function changeView(){
+    $('releases').classList.remove(viewOption);
     if(viewOption == "view_list"){
         viewOption = "view_module"
     }else{
         viewOption = "view_list"
     }
     $('view-option').innerHTML = viewOption;
+    $('releases').classList.add(viewOption);
 }
 $("view-option").addEventListener("click", changeView);

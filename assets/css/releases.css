@@ -9,7 +9,7 @@
 #view-option{
     cursor: pointer;
     padding: 4px;
-    color: rgba(255,255,255,0.8)
+    color: rgba(255,255,255,0.78)
 }
 
 
@@ -24,7 +24,7 @@ main{
 .releases{
     
 }
-.releases .album{
+.releases.view_module .album{
     display: inline-block;
     vertical-align: middle;
     color: white;
@@ -36,65 +36,65 @@ main{
     -o-transition: background-color .15s ease-in-out;
     transition: background-color .15s ease-in-out;
 }
-.releases .album:hover{
+.releases.view_module .album:hover{
     background-color: #1b616d;
 }
-.releases .album:focus,.releases .album:active{
+.releases.view_module .album:focus,.releases.view_module .album:active{
     background-color: #1e6774;
 }
 
-.album-width{
+.view_module .album-width{
     max-width: 22%;
 }
 @media only screen and (max-width: 1199px){
-    .album-width{
+    .view_module .album-width{
         max-width: 25%;
     }
 }
 @media only screen and (max-width: 1024px){
-    .album-width{
+    .view_module .album-width{
         max-width: 26%;
     }
 }
 @media only screen and (max-width: 920px){
-    .album-width{
+    .view_module .album-width{
         max-width: 27%;
     }
 }
 @media only screen and (max-width: 835px){
-    .album-width{
+    .view_module .album-width{
         max-width: 28%;
     }
 }
 @media only screen and (max-width: 765px){
-    .album-width{
+    .view_module .album-width{
         max-width: 35%;
     }
 }
 @media only screen and (max-width: 680px){
-    .album-width{
+    .view_module .album-width{
         max-width: 40%;
     }
 }
 @media only screen and (max-width: 600px){
-    .album-width{
+    .view_module .album-width{
         max-width: 42%;
     }
 }
 @media only screen and (max-width: 501px){
-    .album-width{
+    .view_module .album-width{
         max-width: 100%;
     }
 }
-.releases .artwork{
+.releases.view_module .artwork{
     width: 100%;
     min-height: 100px;
     display: inline-block;
     background-color: #184048;
-    -webkit-box-shadow: 0 2px 7px 0 rgba(0,0,0,.3), 0 1px 2px 0 rgba(0,0,0,.2);
-    box-shadow: 0 2px 7px 0 rgba(0,0,0,.3), 0 1px 2px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 2px 6px 0 rgba(0,0,0,.25), 0 1px 2px 0 rgba(0,0,0,.15);
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.25), 0 1px 2px 0 rgba(0,0,0,.15);
 }
-.releases .name{
+.releases.view_module .name{
     color: white;
     font-weight: 500;
     font-size: 1rem;
@@ -108,21 +108,6 @@ main{
     width: 25px;
     background: #175762;
     border-radius: 50px;
-}
-.releases .album-button{
-    margin-right: .75rem;
-}
-.releases .album-button .button{
-    background-color: #185a65;
-    -webkit-transition: background-color .15s ease-in-out;
-    -o-transition: background-color .15s ease-in-out;
-    transition: background-color .15s ease-in-out;
-}
-.releases .album-button .button:hover{
-    background-color: #1b616d;
-}
-.releases .album-button .button:focus,.releases .album-button .button:active{
-    background-color: #175762;
 }
 
 
