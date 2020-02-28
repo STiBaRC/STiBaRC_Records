@@ -1,8 +1,24 @@
+.top-bar{
+    display: flex;
+    align-items: center;
+}
+.top-bar .side{
+    display: inline-block;
+    vertical-align: middle;
+}
+#view-option{
+    cursor: pointer;
+    padding: 4px;
+    color: rgba(255,255,255,0.8)
+}
+
+
 /* main stuffs */
 main{
     margin:5.5rem 0 6.5rem 0;
     min-height: 70vh;
 }
+
 
 /* releases */
 .releases{

@@ -29,3 +29,14 @@ function loadReleases(type){
     xhttp.open("GET", releasesUrl, true);
     xhttp.send();
 }
+/* view options */
+var viewOption = "view_list";
+function changeView(){
+    if(viewOption == "view_list"){
+        viewOption = "view_module"
+    }else{
+        viewOption = "view_list"
+    }
+    $('view-option').innerHTML = viewOption;
+}
+$("view-option").addEventListener("click", changeView);
