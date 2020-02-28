@@ -28,13 +28,17 @@
         }
     },
     "3":{
-        "name":"Test A",
+        "name":"Cool Test",
         "artists":{
             "1":{
-                "id":"5",
+                "id":"3",
                 "username":"Herronjo"
             },
             "2":{
+                "id":"1",
+                "username":"Verso"
+            },
+            "3":{
                 "id":"2",
                 "username":"Bunnbuns"
             }
@@ -43,60 +47,6 @@
             "full":"/assets/images/releases/Test_A.jpg",
             "500px":"/assets/images/releases/Test_A-500px.jpg",
             "200px":"/assets/images/releases/Test_A-200px.jpg"
-        }
-    },
-    "4":{
-        "name":"Windows",
-        "artists":{
-            "1":{
-                "id":"3",
-                "username":"Test"
-            },
-            "2":{
-                "id":"4",
-                "username":"Another Name"
-            }
-        },
-        "artwork":{
-            "full":"/assets/images/releases/pabalt_(test).jpg",
-            "500px":"/assets/images/releases/pabalt_(test).jpg",
-            "200px":"/assets/images/releases/pabalt_(test).jpg"
-        }
-    },
-    "5":{
-        "name":"Bruh",
-        "artists":{
-            "1":{
-                "id":"3",
-                "username":"Test"
-            },
-            "2":{
-                "id":"4",
-                "username":"Another Name"
-            }
-        },
-        "artwork":{
-            "full":"/assets/images/releases/pabalt_(test).jpg",
-            "500px":"/assets/images/releases/pabalt_(test).jpg",
-            "200px":"/assets/images/releases/pabalt_(test).jpg"
-        }
-    },
-    "6":{
-        "name":"E",
-        "artists":{
-            "1":{
-                "id":"3",
-                "username":"Test"
-            },
-            "2":{
-                "id":"4",
-                "username":"Another Name"
-            }
-        },
-        "artwork":{
-            "full":"/assets/images/releases/pabalt_(test).jpg",
-            "500px":"/assets/images/releases/pabalt_(test).jpg",
-            "200px":"/assets/images/releases/pabalt_(test).jpg"
         }
     }
 }
