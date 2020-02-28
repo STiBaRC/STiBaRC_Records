@@ -197,6 +197,40 @@ hr.lg{
     background-color: rgba(66, 175, 191, 0.5);
 }
 
+/* loading spiner */
+
+.loader{
+    border: 5px solid #185b67;
+    border-radius: 50%;
+    border-top: 5px solid #185b67;
+    border-right: 5px solid #11444d;
+    border-bottom: 5px solid #11444d;
+    width: 25px;
+    height: 25px;
+    -webkit-animation: spin 0.4s linear infinite;
+    animation: spin 0.4s linear infinite
+}
+
+@-webkit-keyframes spin{
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin{
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* main stuffs */
 main{
