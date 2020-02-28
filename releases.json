@@ -11,7 +11,9 @@
             "full":"/assets/images/releases/Golden_Days.png",
             "500px":"/assets/images/releases/Golden_Days-500px.jpg",
             "200px":"/assets/images/releases/Golden_Days-200px.jpg"
-        }
+        },
+        "year":"2020",
+        "genre":"Pop"
     },
     "2":{
         "name":"SA-46 Dreams",
@@ -25,7 +27,9 @@
             "full":"/assets/images/releases/SA-46_Dreams.jpg",
             "500px":"/assets/images/releases/SA-46_Dreams-500px.jpg",
             "200px":"/assets/images/releases/SA-46_Dreams-200px.jpg"
-        }
+        },
+        "year":"2019",
+        "genre":"Soundtrack"
     },
     "3":{
         "name":"Cool Test",
@@ -47,6 +51,8 @@
             "full":"/assets/images/releases/Test_A.jpg",
             "500px":"/assets/images/releases/Test_A-500px.jpg",
             "200px":"/assets/images/releases/Test_A-200px.jpg"
-        }
+        },
+        "year":"2020",
+        "genre":"N/A"
     }
 }
