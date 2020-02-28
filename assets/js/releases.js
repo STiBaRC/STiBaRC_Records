@@ -31,15 +31,16 @@ function loadReleases(type){
 }
 /* view options */
 var viewOption = "view_module";
-$('releases').classList.add('view_module');
+$('releases').classList.add(viewOption);
 function changeView(){
     $('releases').classList.remove(viewOption);
     if(viewOption == "view_list"){
-        viewOption = "view_module"
+        viewOption = "view_module";
+        $('view-option').innerHTML = "view_list";
     }else{
-        viewOption = "view_list"
+        viewOption = "view_list";
+        $('view-option').innerHTML = "view_module";
     }
-    $('view-option').innerHTML = viewOption;
     $('releases').classList.add(viewOption);
 }
 $("view-option").addEventListener("click", changeView);
