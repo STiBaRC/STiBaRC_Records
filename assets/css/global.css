@@ -59,7 +59,8 @@ nav .logo{
     font-size: 1.75rem;
     font-weight: bold;
     color: white;
-    padding: 1.2rem 0 1.2rem 0;
+    padding: .2rem 0 .2rem 0;
+    margin: 1rem 0 1rem 0;
 }
 .logo-img{
     height: 2.5rem;
@@ -106,18 +107,49 @@ nav .links a:hover:not(.active){
 nav .links a:focus:not(.active){
     background-color: rgba(66, 175, 191, 0.5);
 }
-@media only screen and (max-width: 745px) {
-    .logo-img{
-        display: none!important;
-    }
-    nav .logo .text {
-        line-height: normal!important;
+nav .mobile-menu-btn{
+    display: none;
+}
+nav .mobile-flex{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+@media only screen and (min-width: 746px) {
+    nav .links{
+        display: flex!important;
     }
 }
-@media only screen and (max-width: 694px) {
-    nav .links{
+@media only screen and (max-width: 745px) {
+    nav .logo{
         white-space: nowrap;
-        overflow-x: scroll;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    nav .links a{
+        display: block;
+        margin-bottom: 4px;
+        text-align: center;
+    }
+    nav .container{
+        display: block;
+    }
+    nav .mobile-flex{
+        display: flex;
+        align-items: center;
+        flex-grow: 0;
+    }
+    /* mobile links */
+    nav .links{
+        display: none;
+        margin: 0 0 1rem 0;
+    }
+    /* button */
+    nav .mobile-menu-btn{
+        display: inline-block;
+        font-size: 1.75rem;
+        padding: 8px;
+        cursor: pointer;
     }
 }
 .hero{
@@ -137,7 +169,6 @@ nav .links a:focus:not(.active){
     transform: translateY(-50%);
 }
 .hero .title{
-    margin: 0 8px;
     font-size: 3.45rem;
     font-weight: 500;
     text-shadow: 0px 0px 12px rgba(0,0,0,0.7);
