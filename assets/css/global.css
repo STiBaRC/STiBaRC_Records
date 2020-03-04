@@ -59,14 +59,15 @@ nav {
 	vertical-align: middle;
 }
 nav .logo {
-	align-items: center;
-	overflow: hidden;
-	vertical-align: middle;
-	font-size: 1.5rem;
-	font-weight: 600;
-	color: var(--navLogoColor);
-	padding: 0.2rem 0 0.2rem 0;
-	margin: 1rem 0 1rem 0;
+    align-items: center;
+    overflow: hidden;
+    vertical-align: middle;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: white;
+    padding: .2rem 0 .2rem 0;
+    margin: 1rem 0 1rem 0;
+}
 }
 .logo-img.circle {
 	border-radius: 50%;
