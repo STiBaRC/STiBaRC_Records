@@ -1,0 +1,44 @@
+:root {
+    /* body */
+    --bodyBg: #11444d;
+    --bodyColor: #ffffff;
+    /* links */
+    --linkColor: #4cbac9;
+    --linkColorHover: #55c6d4;
+    --linkColorActive: #48b0bf;
+    --linkColorFocus: #46a6b4;
+    /* nav */
+    --navBg: #276e79;
+    --navColor: #ffffff;
+    --navLogoColor: #ffffff;
+    --navLinkBorderColor: #42afbf;
+    --navLinkBg: rgba(66, 175, 191, 0.35);
+    --navLinkBg-Active: #42afbf;
+    --navLinkBgHover: rgba(66, 175, 191, 0.35);
+    --navLinkBgFocus: rgba(66, 175, 191, 0.5);
+    --navLinkColor: #ffffff;
+    /* hr */
+    --hrBorderColor: rgba(255, 255, 255, 0.25);
+    /* scrollbar */
+    --scrollbarTrackBg: rgba(59, 96, 103, 0.9);
+    --scrollbarThumbBg: rgba(117, 157, 163, 0.85);
+    --scrollbarThumbBgHover: rgba(128, 172, 178, 0.85);
+    /* button */
+    --buttonBg: #3ca6b5;
+    --buttonColor: #ffffff;
+    --buttonBgHover: #44b4c4;
+    --buttonBgActive: #389fad;
+    --buttonBgFocus: #3799a7;
+    --button-outlineBorderColor: #42afbf;
+    --button-outlineBgHover: rgba(66, 175, 191, 0.35);
+    --button-outlineBgActive: rgba(66, 175, 191, 0.5);
+    --button-outlineBgFocus: rgba(66, 175, 191, 0.5);
+    /* loader */
+    --loaderBg: #185b67;
+    /* footer */
+    --footerBg: #2b7c88;
+    --footerColor: rgba(255, 255, 255, 0.77);
+    --footerLinkColor: rgba(255, 255, 255, 0.77);
+    --footerLinkColorHoverFocus: rgba(255, 255, 255, 0.84);
+    --footer-copyrightBg: rgba(51, 51, 51, 0.08);
+}
