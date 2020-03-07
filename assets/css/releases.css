@@ -45,7 +45,7 @@ main{
 /* list */
 .releases.view_list .album{
     display: block;
-    padding: 8px;
+    padding: 6px;
     margin: 0 0 2px 0;
     border-radius: 2px;
 }
@@ -116,7 +116,6 @@ main{
     display: inline-block;
     vertical-align: middle;
     width: 150px;
-    border-radius: 2px;
     margin-right: 4px;
 }
 .releases .artwork{

@@ -22,12 +22,12 @@
             }
         },
         "artwork":{
-            "full":"releases/SA-46_Dreams.jpg",
+            "full":"releases/SA-46_Dreams.png",
             "500px":"releases/SA-46_Dreams-500px.jpg",
             "200px":"releases/SA-46_Dreams-200px.jpg"
         },
-        "year":"2019",
-        "genre":"Soundtrack"
+        "year":"2020",
+        "genre":"Alternative"
     },
     "3":{
         "name":"Cool Test",
