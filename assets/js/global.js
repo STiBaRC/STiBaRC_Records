@@ -22,7 +22,7 @@ document.addEventListener("click", function(event) {
     }
 });
 // set devMode to false in production //
-var devMode = true;
+var devMode = false;
 
 var devBaseUrl = "/";
 var baseUrl = "https://stibarc.github.io/STiBaRC_Records/";
