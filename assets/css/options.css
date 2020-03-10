@@ -2,6 +2,7 @@
     /* body */
     --bodyBg: #11444d;
     --bodyColor: #ffffff;
+    --light-text: rgba(255,255,255, 0.85);
     /* links */
     --linkColor: #4cbac9;
     --linkColorHover: #55c6d4;
@@ -20,9 +21,9 @@
     /* hr */
     --hrBorderColor: rgba(255, 255, 255, 0.25);
     /* scrollbar */
-    --scrollbarTrackBg: rgba(59, 96, 103, 0.9);
-    --scrollbarThumbBg: rgba(117, 157, 163, 0.85);
-    --scrollbarThumbBgHover: rgba(128, 172, 178, 0.85);
+    --scrollbarTrackBg: rgba(65, 112, 121, 0.9);
+    --scrollbarThumbBg: rgba(130, 174, 180, 0.85);
+    --scrollbarThumbBgHover: rgba(123, 162, 167, 0.85);
     /* button */
     --buttonBg: #3ca6b5;
     --buttonColor: #ffffff;

@@ -24,7 +24,7 @@ a {
 	color: var(--linkColor);
 }
 a:hover {
-	color: var(--linkColorHover);
+    color: var(--linkColorHover);
 }
 a:active {
 	color: var(--linkColorActive);

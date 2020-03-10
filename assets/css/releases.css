@@ -32,6 +32,15 @@ main{
 .releases{
     
 }
+/* list */
+.releases.view_list .album:first-child{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.releases.view_list .album:last-child{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 /* module */
 .releases.view_module .album{
     display: inline-block;
@@ -45,9 +54,10 @@ main{
 /* list */
 .releases.view_list .album{
     display: block;
-    padding: 6px;
-    margin: 0 0 2px 0;
-    border-radius: 2px;
+    padding: 8px;
+    margin: 0 0 1px 0;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .releases .album{
     color: white;
@@ -115,7 +125,7 @@ main{
 .releases.view_list .artwork{
     display: inline-block;
     vertical-align: middle;
-    width: 150px;
+    width: 125px;
     margin-right: 4px;
 }
 .releases .artwork{
@@ -129,14 +139,23 @@ main{
 .releases.view_list .name{
     display: inline-block;
     vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .releases .name{
     color: white;
     font-weight: 600;
     font-size: 1rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+}
+/* list */
+.releases.view_list .name .name-spacer{
+    display: none;
+}
+/* list */
+.releases.view_list .name .name-artists{
+    display: block;
+    color: var(--light-text);
+    font-weight: 400;
 }
 /* module */
 .releases.view_module .year{
@@ -150,24 +169,3 @@ main{
     color: rgba(255,255,255,0.5);
     font-weight: 400;
 }
-
-
-/*
- artists 
-.artists .person{
-    color: white;
-    display: inline-block;
-    margin: 0 12px 1rem 0;
-}
-.artists .person .name{
-    color: white;
-    font-weight: bold;
-    font-size: 1.25rem;
-    margin: .5rem 0 0 0;
-}
-.artists .pfp{
-    height: 150px;
-    width: 150px;
-    background: #175762;
-    border-radius: 50%;
-}*/
