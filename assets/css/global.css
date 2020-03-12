@@ -162,27 +162,6 @@ nav .mobile-flex {
 		cursor: pointer;
 	}
 }
-.hero {
-	position: relative;
-	/* credit to https://unsplash.com/@black_onion for blue vinyl image */
-	background: #275c85 url('../images/blue-record.jpg') no-repeat center center;
-	background-size: cover;
-	color: white;
-	min-height: 100vh;
-}
-.hero .vertical-center {
-	text-align: center;
-	width: 100%;
-	position: absolute;
-	top: 50%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-.hero .title {
-	font-size: 3.45rem;
-	font-weight: 500;
-	text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
-}
 .noselect {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -241,6 +220,7 @@ hr.lg {
 	text-align: center;
 	border-radius: 5px;
 	cursor: pointer;
+    border: 0;
 	-webkit-transition: background-color 0.15s ease-in-out;
 	-o-transition: background-color 0.15s ease-in-out;
 	transition: background-color 0.15s ease-in-out;
