@@ -3,7 +3,7 @@
         "name":"Golden Days",
         "artists":{
             "1":{
-                "username":"Verso"
+                "username":"Alluthus (Verso)"
             }
         },
         "artwork":{
@@ -28,26 +28,5 @@
         },
         "year":"2020",
         "genre":"Alternative"
-    },
-    "3":{
-        "name":"Cool Test",
-        "artists":{
-            "1":{
-                "username":"herronjo"
-            },
-            "2":{
-                "username":"Verso"
-            },
-            "3":{
-                "username":"Bunnbuns"
-            }
-        },
-        "artwork":{
-            "full":"releases/Test_A.jpg",
-            "500px":"releases/Test_A-500px.jpg",
-            "200px":"releases/Test_A-200px.jpg"
-        },
-        "year":"2017",
-        "genre":"N/A"
     }
 }

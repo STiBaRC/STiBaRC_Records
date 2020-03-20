@@ -23,7 +23,7 @@ function loadReleases(type){
     xhttp.onload = function() {
         var tmp = JSON.parse(xhttp.responseText);
 		$('releases').innerHTML = '';
-		for (var i = 1; i < Object.keys(tmp).length+1; i++) {
+		for (var i = Object.keys(tmp).length; i > 0; i--) {
 			release(i,tmp[i]);
         }
         $('releases').innerHTML = releaseList;
@@ -31,48 +31,5 @@ function loadReleases(type){
     xhttp.open("GET", releasesUrl, true);
     xhttp.send();
 }
-/* view options */
-var getViewOption = sessionStorage.getItem('viewOption');
-if(getViewOption == null){
-    // view option not set, so use module view
-    console.log('view option not set, so setting to module_view');
-    var viewOption = "view_module";
-    $('releases').classList.add(viewOption);
-    // set storage to use module view
-    sessionStorage.setItem('viewOption', 'view_module');
-}else{
-    // view option is set, so use it
-    var viewOption = getViewOption;
-    $('releases').classList.add(getViewOption);
-    if(viewOption == "view_list"){
-        
-        $('view-option').innerHTML = "view_module";
-        
-    }else{
-        
-        $('view-option').innerHTML = "view_list";
-        
-    }
-}
-function changeView(){
-    $('releases').classList.remove(viewOption);
-    
-    if(viewOption == "view_list"){
-        
-        viewOption = "view_module";
-        $('view-option').innerHTML = "view_list";
-        
-    }else{
-        
-        viewOption = "view_list";
-        $('view-option').innerHTML = "view_module";
-        
-    }
-    $('releases').classList.add(viewOption);
-    sessionStorage.setItem('viewOption', viewOption);
-}
-$("view-option").addEventListener("click", changeView);
-
-
 
 /* page load */

@@ -46,7 +46,7 @@ function loadReleases(type){
     xhttp.onload = function() {
         var tmp = JSON.parse(xhttp.responseText);
 		$('releases').innerHTML = '';
-		for (var i = 1; i < Object.keys(tmp).length+1; i++) {
+		for (var i = Object.keys(tmp).length; i > 0; i--) {
 			release(i,tmp[i]);
         }
         $('releases').innerHTML = releaseList + '<span id="release-more-btn" class="album-button album-width" style="display: none;"> <a class="button big" href="./releases/">View All</a> </span>';
