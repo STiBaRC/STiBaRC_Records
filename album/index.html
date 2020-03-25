@@ -3,12 +3,13 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
-        <link rel="icon" type="image/png" href="./assets/images/logo.png">
+        <link rel="icon" type="image/png" href="../assets/images/logo.png">
         
-        <title>Blank page - STiBaRC Records</title>
+        <title>Album - STiBaRC Records</title>
         
         <!-- CSS -->
-        <link rel="stylesheet" href="./assets/css/global.css">
+        <link rel="stylesheet" href="../assets/css/global.css">
+        <link rel="stylesheet" href="../assets/css/album.css">
         
         <!-- Fonts -->
         <link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -18,7 +19,7 @@
         <meta name="keywords" content="stibarc records,stibarc,so this is basically a reddit clone" />
         <meta name="description" content="STiBaRC Records: Cancer, but it's a record label..">
         <!-- Open Graph -->
-        <meta property="og:image" content="./assets/images/open-graph.png" />
+        <meta property="og:image" content="../assets/images/open-graph.png" />
         <meta property="og:image:width" content="1280" />
         <meta property="og:image:height" content="640" />
 
@@ -29,35 +30,46 @@
             <div class="container">
                 <span class="mobile-flex">
                     <span class="flex-grow">
-                        <a class="logo" href="./">
-                            <img class="logo-img" src="./assets/images/logo-white.svg"><span class="text">STiBaRC Records</span>
+                        <a class="logo" href="../">
+                            <img class="logo-img" src="../assets/images/logo-white.svg"><span class="text">STiBaRC Records</span>
                         </a>
                     </span>
                     <i class="material-icons mobile-menu-btn noselect" id="mobile-btn">menu</i>
                 </span>
                 <span class="links" id="nav-links" style="display: none">
-                    <a class="" href="./">Home</a>
-                    <a class="" href="./releases/">Releases</a>
-                    <a class="" href="./contact/">Contact</a>
-                    <a class="" href="./about/">About</a>
+                    <a class="" href="../">Home</a>
+                    <a class="active" href="../releases/">Releases</a>
+                    <a class="" href="../contact/">Contact</a>
+                    <a class="" href="../about/">About</a>
                 </span>
             </div>
         </nav>
         
-        <br>
-        
         <main>
-            
             <div class="container">
+
+                <section style="margin: 8rem 0 2rem 0;">
+                    
+                    <div class="album-top ">
+                        
+                        <img class="album-cover " src="../assets/images/releases/SA-46_Dreams-500px.jpg">
+                        
+                        <span class="info ">
+                            <div id="type">Single</div>
+                            <h1 id="title">SA-46 Dreams</h1>
+                            <div class="artist">By <a id="artist">Bunnbuns</a></div>
+                            <div class="extra">
+                                <span id="year">2020</span> • 
+                                <span id="count">2 songs</span>
+                            </div>
+                        </span>
+                        
+                    </div>
+                    
+                </section>
                 
-                <h1 class="title">Test</h1>
-                
-                <div id="load" style="display: block;">
-                    <center><div class="loader"></div></center>
-                </div>
                 
             </div>
-            
         </main>
         
         <footer class="page-footer">
@@ -71,6 +83,7 @@
             </div>
         </footer>
         
-        <script src="./assets/js/global.js"></script>
+        <script src="../assets/js/global.js"></script>
+        <script src="../assets/js/album.js"></script>
     </body>
 </html>

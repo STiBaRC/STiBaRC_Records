@@ -1,0 +1,66 @@
+{
+    "artists":[
+        {
+            "name":"Alluthus",
+            "pfp":"pfp/alluthus.jpg"
+        },
+        {
+            "name":"Bunnbuns",
+            "pfp":"pfp/bunnbuns.jpg"
+        },
+        {
+            "name":"herronjo",
+            "pfp":"pfp/herronjo.jpg"
+        }
+    ],
+    "albums":[
+        {
+            "name":"Golden Days",
+            "artist":"0",
+            "year":"2020",
+            "artwork":{
+                "full":"releases/Golden_Days.png",
+                "500px":"releases/Golden_Days-500px.jpg",
+                "200px":"releases/Golden_Days-200px.jpg"
+            },
+            "genre":"Alternative"
+        },
+        {
+            "name":"SA-46 Dreams",
+            "artist":"1",
+            "year":"2020",
+            "artwork":{
+                "full":"releases/Golden_Days.png",
+                "500px":"releases/Golden_Days-500px.jpg",
+                "200px":"releases/Golden_Days-200px.jpg"
+            },
+            "genre":"Alternative"
+        }
+    ],
+    "songs":[
+        {
+            "name":"Aura",
+            "artists":"0"
+        },
+        {
+            "name":"Golden Days",
+            "artists":"0"
+        },
+        {
+            "name":"Lost",
+            "artists":"0"
+        },
+        {
+            "name":"Urban Groove",
+            "artists":"0"
+        },
+        {
+            "name":"Slugs",
+            "artists":"1"
+        },
+        {
+            "name":"Quilt",
+            "artists":"1"
+        }
+    ]
+}

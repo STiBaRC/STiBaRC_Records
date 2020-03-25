@@ -3,7 +3,7 @@
         "name":"Golden Days",
         "artists":{
             "1":{
-                "username":"Alluthus (Verso)"
+                "username":"Alluthus"
             }
         },
         "artwork":{
@@ -12,7 +12,10 @@
             "200px":"releases/Golden_Days-200px.jpg"
         },
         "year":"2020",
-        "genre":"Pop"
+        "genre":"Alternative",
+        "links":{
+            "Spotify":""
+        }
     },
     "2":{
         "name":"SA-46 Dreams",
@@ -27,6 +30,9 @@
             "200px":"releases/SA-46_Dreams-200px.jpg"
         },
         "year":"2020",
-        "genre":"Alternative"
+        "genre":"Alternative",
+        "links":{
+            "Spotify":""
+        }
     }
 }

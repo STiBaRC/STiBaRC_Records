@@ -1,0 +1,78 @@
+.album-top{
+    display: block;
+}
+.album-cover{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.25rem;
+    max-width: 400px;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+.album-top .info{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    margin: 0;
+}
+.album-top .info #type{
+    text-transform: uppercase;
+    color: var(--light-text);
+    font-size: 1rem;
+}
+.album-top .info #title{
+    font-size: 2.85rem;
+    font-weight: 700;
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+}
+.album-top .info .artist{
+    color: var(--light-text);
+    font-size: 1.22rem;
+    font-weight: 400;
+    margin: .5rem 0;
+}
+.album-top .info .artist #artist{
+    color: var(--bodyColor);
+    font-weight: 500;
+}
+.album-top .info .extra{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--light-text);
+}
+@media only screen and (max-width: 1280px){
+    .album-top .info #title{
+        font-size: 2.75rem;
+    }
+    .album-top .info .artist{
+        font-size: 1.18rem;
+    }
+}
+@media only screen and (max-width: 986px){
+    .album-cover{
+        max-width: 300px;
+    }
+    .album-top .info #title{
+        font-size: 2.5rem;
+    }
+    .album-top .info .artist{
+        font-size: 1.15rem;
+    }
+}
+@media only screen and (max-width: 745px){
+    .album-cover{
+        display: block;
+        text-align: center;
+        margin: 0 auto 1rem auto;
+        max-width: 50vh;
+        width: 100%;
+    }
+    .album-top .info{
+        display: block;
+        margin: 1.5rem auto 1rem auto;
+        max-width: 50vh;
+        width: 100%;
+        text-align: center;
+    }
+}
