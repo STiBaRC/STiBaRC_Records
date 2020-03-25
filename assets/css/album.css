@@ -18,7 +18,7 @@
 .album-top .info #type{
     text-transform: uppercase;
     color: var(--light-text);
-    font-size: 1rem;
+    font-size: 1.05rem;
 }
 .album-top .info #title{
     font-size: 2.85rem;
@@ -37,7 +37,7 @@
     font-weight: 500;
 }
 .album-top .info .extra{
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 400;
     color: var(--light-text);
 }
@@ -58,6 +58,12 @@
     }
     .album-top .info .artist{
         font-size: 1.15rem;
+    }
+    .album-top .info #type{
+        font-size: 1rem;
+    }
+    .album-top .info .extra{
+        font-size: 1rem;
     }
 }
 @media only screen and (max-width: 745px){

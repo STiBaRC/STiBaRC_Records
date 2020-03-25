@@ -23,44 +23,49 @@
                 "500px":"releases/Golden_Days-500px.jpg",
                 "200px":"releases/Golden_Days-200px.jpg"
             },
-            "genre":"Alternative"
+            "genre":"Alternative",
+            "type":"Single",
+            "songs":[0,1,2,3]
         },
         {
             "name":"SA-46 Dreams",
             "artist":"1",
             "year":"2020",
             "artwork":{
-                "full":"releases/Golden_Days.png",
-                "500px":"releases/Golden_Days-500px.jpg",
-                "200px":"releases/Golden_Days-200px.jpg"
+                "full":"releases/SA-46_Dreams.png",
+                "500px":"releases/SA-46_Dreams-500px.jpg",
+                "200px":"releases/SA-46_Dreams-200px.jpg"
             },
-            "genre":"Alternative"
+            "genre":"Alternative",
+            "type":"Single",
+            "songs":[4,5]
         }
     ],
     "songs":[
         {
             "name":"Aura",
-            "artists":"0"
+            "artists":[0]
+            
         },
         {
             "name":"Golden Days",
-            "artists":"0"
+            "artists":[0]
         },
         {
             "name":"Lost",
-            "artists":"0"
+            "artists":[0]
         },
         {
             "name":"Urban Groove",
-            "artists":"0"
+            "artists":[0]
         },
         {
             "name":"Slugs",
-            "artists":"1"
+            "artists":[1]
         },
         {
             "name":"Quilt",
-            "artists":"1"
+            "artists":[1]
         }
     ]
 }
