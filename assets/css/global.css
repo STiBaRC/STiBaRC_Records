@@ -233,6 +233,12 @@ hr.lg {
 	font-size: 1rem;
 	padding: 8px 16px;
 }
+.button.square {
+	padding: 8px 10px;
+}
+.button.square i{
+    font-size: 1.7rem;
+}
 .button:hover {
 	color: var(--buttonColor);
 	background-color: var(--buttonBgHover);
@@ -254,6 +260,9 @@ hr.lg {
 }
 .button.outline.small {
 	padding: 7px 15px;
+}
+.button.outline.square {
+	padding: 7px 9px;
 }
 .button.outline:hover {
 	background-color: var(--button-outlineBgHover);

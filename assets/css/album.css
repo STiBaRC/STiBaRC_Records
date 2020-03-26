@@ -41,6 +41,9 @@
     font-weight: 400;
     color: var(--light-text);
 }
+.album-top .info #links{
+    margin: 1rem 0 0 0;
+}
 
 /* song area */
 .song-area{

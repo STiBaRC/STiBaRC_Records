@@ -26,6 +26,14 @@ function loadAlbumInfo(){
             songs += '<tr><td>'+(i+1)+'</td><td>'+data['songs'][currentSong]['name']+'</td></tr>';
         }
         
+        var linkKeys   = Object.keys(data['albums'][albumID]['links']);
+        var links       = '';
+        
+        for (let i = 0; i < linkKeys.length; i++){
+            var currentKey = linkKeys[i];
+            var currentLink = data['albums'][albumID]['links'][currentKey];
+            links += '<a href="'+currentLink+'" class="button square outline" title="'+currentKey+'" target="_blank"><i class="fa fa-'+currentKey.toLowerCase()+' fa-2x"></i></a>';
+        }
         
         $('mainCover').src = cover;
         $('type').innerHTML = type;
@@ -35,6 +43,7 @@ function loadAlbumInfo(){
         $('year').innerHTML = year;
         $('count').innerHTML = songCount;
         $('songs').innerHTML =  songs;
+        $('links').innerHTML = links;
         
     };
     xhttp.open("GET", '/data.json', true);
