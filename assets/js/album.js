@@ -1,31 +1,43 @@
 var albumID = parseInt(getAllUrlParams().id);
 
-loadAlbumInfo();
-
-
-var data;
-
 function loadAlbumInfo(){
     
     var xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
         
-        data = JSON.parse(xhttp.responseText);
+        var data = JSON.parse(xhttp.responseText);
         $('load').style.display = 'none';
         $('album-top').style.display = '';
         
-//		for (var i = 1; i < Object.keys(tmp).length+1; i++) {
-//			artist(i,tmp[i]);
-//        }
+        var cover       = artworkPath + data['albums'][albumID]['artwork']['500px'];
+        var type        = data['albums'][albumID]['type'];
+        var title       = data['albums'][albumID]['name'];
+        var artistId    = parseInt(data['albums'][albumID]['artist']);
         
-        $('mainCover').src = artworkPath + data['albums'][albumID]['artwork']['500px'];
-        $('type').innerHTML = data['albums'][albumID]['type'];
-        $('title').innerHTML = data['albums'][albumID]['name'];
-        $('artist').innerHTML = data['artists'][parseInt(data['albums'][albumID]['artist'])]['name'];
-        $('year').innerHTML = data['albums'][albumID]['year'];
-        $('count').innerHTML = Object.keys(data['albums'][albumID]['songs']).length;
+        var artist      = data['artists'][artistId]['name'];
+        var year        = data['albums'][albumID]['year'];
+        
+        var songCount   = Object.keys(data['albums'][albumID]['songs']).length;
+        
+        var songs       = '<tr><th>#</th><th>TITLE</th></tr> ';
+        
+        for (let i = 0; i < songCount; i++){
+            var currentSong = data['albums'][albumID]['songs'][i];
+            songs += '<tr><td>'+(i+1)+'</td><td>'+data['songs'][currentSong]['name']+'</td></tr>';
+        }
+        
+        
+        $('mainCover').src = cover;
+        $('type').innerHTML = type;
+        $('title').innerHTML = title;
+        $('artist').innerHTML = artist
+        $('year').innerHTML = year;
+        $('count').innerHTML = songCount;
+        $('songs').innerHTML =  songs;
         
     };
     xhttp.open("GET", '/data.json', true);
     xhttp.send();
 }
+
+loadAlbumInfo();
