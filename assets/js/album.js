@@ -30,6 +30,7 @@ function loadAlbumInfo(){
         $('mainCover').src = cover;
         $('type').innerHTML = type;
         $('title').innerHTML = title;
+        document.title = title + ' - STiBaRC Records';
         $('artist').innerHTML = artist
         $('year').innerHTML = year;
         $('count').innerHTML = songCount;
