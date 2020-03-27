@@ -44,6 +44,9 @@
 .album-top .info #links{
     margin: 1rem 0 0 0;
 }
+.album-top .info i{
+    color: rgba(255,255,255,0.9)
+}
 
 /* song area */
 .song-area{
@@ -51,7 +54,7 @@
 }
 th, td {
     padding: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 table {
     border-spacing: 0;
