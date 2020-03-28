@@ -41,7 +41,14 @@ var artworkPath = baseUrl+"assets/images/";
 var pfpPath = baseUrl+"assets/images/";
 
 
-/* get url params */
+// func to show or hide a page part //
+function pagePartsDisplay(d){
+    const allPages = document.querySelectorAll(".page-part");
+    for (var i = 0; i < allPages.length; i++) {
+        allPages[i].style.display = d;
+    }
+}
+// get url params //
 function getAllUrlParams(url) {
 	var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
 	var obj = {};

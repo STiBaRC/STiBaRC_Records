@@ -6,11 +6,17 @@
         },
         {
             "name":"Bunnbuns",
-            "pfp":"pfp/bunnbuns.jpg"
+            "pfp":"pfp/bunnbuns.jpg",
+            "links":{
+                "email":"ben@bunnbuns.net"
+            }
         },
         {
             "name":"herronjo",
-            "pfp":"pfp/herronjo.jpg"
+            "pfp":"pfp/herronjo.jpg",
+            "links":{
+                "email":"herronjo@stibarc.com"
+            }
         }
     ],
     "albums":[
