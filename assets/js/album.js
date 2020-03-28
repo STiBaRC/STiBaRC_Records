@@ -41,11 +41,13 @@ function loadAlbumInfo(){
             // for artists in song
             for (let i = 0; i < artistsKeys.length; i++){
                 var currentKey = parseInt(artistsKeys[i]);
+                var separator = '';
                 if(currentKey > 0){
-                    artists += ', ';
+                    separator = '<span class="sep">, </span>';
                 }
                 var currentArtistKey = currentSongObj['artists'][currentKey];
-                artists += data['artists'][currentArtistKey]['name'];
+                var currentArtistName = data['artists'][currentArtistKey]['name'];
+                artists += separator+'<a class="artist-link" href="../artist/?id='+currentArtistKey+'">'+currentArtistName+'</a>';
             }
             var currentSongName = currentSongObj['name'];
             songs += '<tr> <td>'+(i+1)+'</td> <td>'+currentSongName+'</td> <td>'+artists+'</td> </tr>';
@@ -67,7 +69,7 @@ function loadAlbumInfo(){
         $('mainCover').src = cover;
         $('type').innerHTML = type;
         $('title').innerHTML = title;
-        document.title = title + ' - STiBaRC Records';
+        document.title = title + ' on STiBaRC Records';
         $('artist').innerHTML = artist;
         $('artist').href = artistLink;
         $('year').innerHTML = year;

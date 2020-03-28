@@ -18,7 +18,7 @@ function loadArtistInfo(){
         var name        = artistsObj['name'];
         var title       = name;
         
-        var linksObj = artistsObj['links'];
+        // releases from artist //
         
         
 //        if(artistsObj.hasOwnProperty('links')){
@@ -50,7 +50,8 @@ function loadArtistInfo(){
 
         
         // prep to get links
-        var links      = '';
+        var linksObj    = artistsObj['links'];
+        var links       = '';
         if(!linksObj == ''){
             // create link button
             var linkData = linksObj['email'];
@@ -62,7 +63,7 @@ function loadArtistInfo(){
         // all other info is set
         $('pfp').src = pfp;
         $('name').innerHTML = name;
-        document.title = title + ' - STiBaRC Records';
+        document.title = title + ' on STiBaRC Records';
         $('links').innerHTML = links;
         
     };
