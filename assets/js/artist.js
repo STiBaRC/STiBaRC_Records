@@ -40,9 +40,13 @@ function loadArtistInfo(){
             var currentName = currentRelease['name'];
             var currentArtistKey = currentRelease['artist'];
             var currentArtist = artistsObj['name'];
-            var currentCover = artworkPath + currentRelease['artwork']['500px'];
+            var currentCover = artworkPath + currentRelease['artwork']['200px'];
             var currentYear = currentRelease['year'];
-            artistReleases +=  '<a class="album album-width" href="../album/?id='+parseInt(currentKey)+'"> <img class="artwork" src="'+currentCover+'" title="'+currentName+' - '+currentArtist+'"> <div class="name">'+currentName+'<span class="name-spacer"> - </span><span class="name-artists">'+currentArtist+'</span> <div class="year">'+currentYear+'</div> </div> </a>';
+            artistReleases +=  '<a class="album album-width" href="../album/?id='+parseInt(currentKey)+'" title="'+currentName+' - '+currentArtist+'"> <img class="artwork" src="'+currentCover+'"> <div class="name">'+currentName+'<span class="name-spacer"> - </span><span class="name-artists">'+currentArtist+'</span> <div class="year">'+currentYear+'</div> </div> </a>';
+        }
+        // if no releases, show somthing
+        if(artistReleases == ''){
+            artistReleases = '<center><h3 class="oop">No releases yet</h3></center>';
         }
         
         

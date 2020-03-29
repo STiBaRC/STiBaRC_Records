@@ -10,10 +10,10 @@ function release(id, item){
             }
             artists += item['artists'][i]['username'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
         }
-        var artwork = artworkPath + item['artwork']['500px'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        var artwork = artworkPath + item['artwork']['200px'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
         var year = item['year'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
         
-        releaseList += '<a class="album album-width" href="../album/?id='+(parseInt(id)-1)+'"> <img class="artwork" src="'+artwork+'" title="'+name +' - '+artists+'"> <div class="name">'+name+'<span class="name-spacer"> - </span><span class="name-artists">'+artists+'</span> <div class="year">'+year+'</div> </div> </a>';
+        releaseList += '<a class="album album-width" href="../album/?id='+(parseInt(id)-1)+'" title="'+name +' - '+artists+'"> <img class="artwork" src="'+artwork+'"> <div class="name">'+name+'<span class="name-spacer"> - </span><span class="name-artists">'+artists+'</span> <div class="year">'+year+'</div> </div> </a>';
     }catch (err){
         console.log(err);
     }
