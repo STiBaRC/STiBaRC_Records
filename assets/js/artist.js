@@ -18,36 +18,32 @@ function loadArtistInfo(){
         var name        = artistsObj['name'];
         var title       = name;
         
-        // releases from artist //
+        // get releases keys from artist
+        var releasesObj = data['albums'];
+        var releasesKeys = Object.keys(releasesObj);
+        var artistReleasesCount = 0;
+        var artistReleasesKeys = [];
+        for(let i = 0; i < releasesKeys.length; i++){
+            var currentRelease = releasesObj[i];
+            if(currentRelease['artist'] == artistID){
+                artistReleasesCount++;
+                artistReleasesKeys.push(i);
+            }
+        }
+        // turn keys into somthing useful
+        var artistReleases = '';
+        for(let i = 0; i < artistReleasesCount; i++){
+            var currentKey = artistReleasesKeys[i];
+            currentRelease = releasesObj[currentKey];
+            // set info //
+            var currentName = currentRelease['name'];
+            var currentArtistKey = currentRelease['artist'];
+            var currentArtist = artistsObj['name'];
+            var currentCover = artworkPath + currentRelease['artwork']['500px'];
+            var currentYear = currentRelease['year'];
+            artistReleases +=  '<a class="album album-width" href="../album/?id='+parseInt(currentKey)+'"> <img class="artwork" src="'+currentCover+'" title="'+currentName+' - '+currentArtist+'"> <div class="name">'+currentName+'<span class="name-spacer"> - </span><span class="name-artists">'+currentArtist+'</span> <div class="year">'+currentYear+'</div> </div> </a>';
+        }
         
-        
-//        if(artistsObj.hasOwnProperty('links')){
-//            var email = artistsObj['email'];
-//        }
-//
-//        // get song count
-//        var songCount   = Object.keys(artistsObj['songs']).length;
-//        
-//        // table header
-//        var songs       = '<tr> <th>#</th> <th>TITLE</th> <th>ARTIST</th> </tr>';
-//        // create song table
-//        for (let i = 0; i < songCount; i++){
-//            var currentSong = artistsObj['songs'][i];
-//            // prep to get artists for song
-//            var artistsKeys = Object.keys(data['songs'][currentSong]['artists']);
-//            var artists = '';
-//            // for artists in song
-//            for (let i = 0; i < artistsKeys.length; i++){
-//                var currentKey = parseInt(artistsKeys[i]);
-//                if(currentKey > 0){
-//                    artists += ', ';
-//                }
-//                var currentArtistKey = data['songs'][currentSong]['artists'][currentKey];
-//                artists += data['artists'][currentArtistKey]['name'];
-//            }
-//            songs += '<tr> <td>'+(i+1)+'</td> <td>'+data['songs'][currentSong]['name']+'</td> <td>'+artists+'</td> </tr>';
-//        }
-
         
         // prep to get links
         var linksObj    = artistsObj['links'];
@@ -65,6 +61,7 @@ function loadArtistInfo(){
         $('name').innerHTML = name;
         document.title = title + ' on STiBaRC Records';
         $('links').innerHTML = links;
+        $('releases').innerHTML = artistReleases;
         
     };
     //send request for all data

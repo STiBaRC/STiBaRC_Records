@@ -2,7 +2,10 @@
     "artists":[
         {
             "name":"Alluthus",
-            "pfp":"pfp/alluthus.jpg"
+            "pfp":"pfp/alluthus.jpg",
+            "links":{
+                "email":"versocreations@gmail.com"
+            }
         },
         {
             "name":"Bunnbuns",

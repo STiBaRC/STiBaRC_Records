@@ -36,6 +36,9 @@
     color: var(--bodyColor);
     font-weight: 500;
 }
+.album-top .info .artist #artist:hover{
+    text-decoration: underline;
+}
 .album-top .info .extra{
     font-size: 1.05rem;
     font-weight: 400;
@@ -45,7 +48,10 @@
     margin: 1rem 0 0 0;
 }
 .album-top .info i{
-    color: rgba(255,255,255,0.9)
+    color: rgba(255,255,255,0.9);
+}
+.album-top .info #links a:hover i{
+    color: white;
 }
 
 /* songs area */
@@ -61,6 +67,9 @@
 }
 .songs-area .artist-link{
     color: white;
+}
+.songs-area .artist-link:hover{
+    text-decoration: underline;
 }
 .songs-area .sep{
     color: var(--light-text);
