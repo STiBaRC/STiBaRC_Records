@@ -9,6 +9,7 @@ function loadArtistInfo(){
         
         // hide load spinner
         $('load').style.display = 'none';
+        $('releasesLoad').style.display = 'none';
         // show page parts
         pagePartsDisplay('');
         
