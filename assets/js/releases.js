@@ -1,3 +1,5 @@
+var imagesBase = '../assets/images/';
+
 // releases //
 var releaseList = '';
 function release(i, data){
@@ -10,7 +12,7 @@ function release(i, data){
         var currentArtistKey = currentRelease['artist'];
         var artistsObj  = data['artists'];
         var currentArtist = artistsObj[currentArtistKey]['name'];
-        var currentCover = artworkPath + currentRelease['artwork']['200px'];
+        var currentCover = imagesBase + currentRelease['artwork']['200px'];
         var currentYear = currentRelease['year'];
         
         releaseList += '<a class="album album-width" href="../album/?id='+currentKey+'" title="'+currentName +' - '+currentArtist+'"> <img class="artwork" src="'+currentCover+'"> <div class="name">'+currentName+'<span class="name-spacer"> - </span><span class="name-artists">'+currentArtist+'</span> <div class="year">'+currentYear+'</div> </div> </a>';

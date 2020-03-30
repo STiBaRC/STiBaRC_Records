@@ -1,3 +1,6 @@
+var imagesBase = '../assets/images/';
+
+// get artist ID from URL //
 var artistID = parseInt(getAllUrlParams().id);
 
 function loadArtistInfo(){
@@ -15,7 +18,7 @@ function loadArtistInfo(){
         
         // set vars
         var artistsObj  = data['artists'][artistID];
-        var pfp         = artworkPath + artistsObj['pfp'];
+        var pfp         = imagesBase + artistsObj['pfp'];
         var name        = artistsObj['name'];
         var title       = name;
         
@@ -40,7 +43,7 @@ function loadArtistInfo(){
             var currentName = currentRelease['name'];
             var currentArtistKey = currentRelease['artist'];
             var currentArtist = artistsObj['name'];
-            var currentCover = artworkPath + currentRelease['artwork']['200px'];
+            var currentCover = imagesBase + currentRelease['artwork']['200px'];
             var currentYear = currentRelease['year'];
             artistReleases +=  '<a class="album album-width" href="../album/?id='+parseInt(currentKey)+'" title="'+currentName+' - '+currentArtist+'"> <img class="artwork" src="'+currentCover+'"> <div class="name">'+currentName+'<span class="name-spacer"> - </span><span class="name-artists">'+currentArtist+'</span> <div class="year">'+currentYear+'</div> </div> </a>';
         }

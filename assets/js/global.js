@@ -21,22 +21,6 @@ document.addEventListener("click", function(event) {
         $("nav-links").style.display = "none";
     }
 });
-// set devMode to false in production //
-var devMode = false;
-
-var devBaseUrl = "/";
-// old url: https://stibarc.github.io/STiBaRC_Records/
-var baseUrl = "/";
-
-if(devMode){
-    baseAPI = devBaseUrl;
-    baseUrl = devBaseUrl;
-}else{
-    baseAPI = baseUrl;
-}
-
-var artworkPath = baseUrl+"assets/images/";
-var pfpPath = baseUrl+"assets/images/";
 
 
 // func to show or hide a page part //

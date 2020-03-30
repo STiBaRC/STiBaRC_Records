@@ -1,3 +1,5 @@
+var imagesBase = '../assets/images/';
+
 // get album ID from URL //
 var albumID = parseInt(getAllUrlParams().id);
 
@@ -15,7 +17,7 @@ function loadAlbumInfo(){
         
         // set vars
         var albumObj    = data['albums'][albumID];
-        var cover       = artworkPath + albumObj['artwork']['500px'];
+        var cover       = imagesBase + albumObj['artwork']['500px'];
         var type        = albumObj['type'];
         var title       = albumObj['name'];
         var artistId    = parseInt(albumObj['artist']);

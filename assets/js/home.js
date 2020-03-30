@@ -1,3 +1,5 @@
+var imagesBase = './assets/images/';
+
 // artists //
 var artistList = "";
 function artist(i, data){
@@ -5,7 +7,7 @@ function artist(i, data){
         var currentKey = parseInt(i);
         // set vars
         var artistsObj  = data['artists'][currentKey];
-        var pfp         = artworkPath + artistsObj['pfp'];
+        var pfp         = imagesBase + artistsObj['pfp'];
         var name        = artistsObj['name'];
         
         artistList += '<a href="./artist/?id='+currentKey+'"><span class="person"> <img class="pfp" src="'+pfp+'"> <div class="name center">'+name+'</div> </span></a>';
@@ -42,7 +44,7 @@ function release(i, data){
         var currentArtistKey = currentRelease['artist'];
         var artistsObj  = data['artists'];
         var currentArtist = artistsObj[currentArtistKey]['name'];
-        var currentCover = artworkPath + currentRelease['artwork']['200px'];
+        var currentCover = imagesBase + currentRelease['artwork']['200px'];
         var currentYear = currentRelease['year'];
         
         releaseList += '<a class="album album-width" href="./album/?id='+currentKey+'" title="'+currentName +' - '+currentArtist+'"> <img class="artwork" src="'+currentCover+'"> <div class="name">'+currentName+'<span class="name-spacer"> - </span><span class="name-artists">'+currentArtist+'</span> <div class="year">'+currentYear+'</div> </div> </a>';
