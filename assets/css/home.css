@@ -122,6 +122,10 @@ main{
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+.releases .name .year{
+    font-weight: 400;
+    color: rgba(255,255,255,0.35);
+}
 .releases .pfp{
     height: 25px;
     width: 25px;
