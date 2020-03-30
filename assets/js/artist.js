@@ -36,7 +36,7 @@ function loadArtistInfo(){
         for(let i = 0; i < artistReleasesCount; i++){
             var currentKey = artistReleasesKeys[i];
             currentRelease = releasesObj[currentKey];
-            // set info //
+            // set info
             var currentName = currentRelease['name'];
             var currentArtistKey = currentRelease['artist'];
             var currentArtist = artistsObj['name'];
@@ -70,7 +70,7 @@ function loadArtistInfo(){
         
     };
     //send request for all data
-    xhttp.open("GET", '/data.json', true);
+    xhttp.open("GET", '../data.json', true);
     xhttp.send();
 }
 

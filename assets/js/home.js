@@ -1,10 +1,14 @@
-/* artists */
+// artists //
 var artistList = "";
-function artist(id, item){
+function artist(i, data){
     try{
-        var username = item['username'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        var pfp = pfpPath + item['pfp'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        artistList += '<a href="./artist/?id='+(parseInt(id)-1)+'"><span class="person"> <img class="pfp" src="'+pfp+'"> <div class="name center">'+username+'</div> </span></a>';
+        var currentKey = (parseInt(i)-1);
+        // set vars
+        var artistsObj  = data['artists'][currentKey];
+        var pfp         = artworkPath + artistsObj['pfp'];
+        var name        = artistsObj['name'];
+        
+        artistList += '<a href="./artist/?id='+currentKey+'"><span class="person"> <img class="pfp" src="'+pfp+'"> <div class="name center">'+name+'</div> </span></a>';
     }catch (err){
         console.log(err);
     }
@@ -12,31 +16,36 @@ function artist(id, item){
 function loadArtists(){
     var xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
-        var tmp = JSON.parse(xhttp.responseText);
+        var data = JSON.parse(xhttp.responseText);
 		$('artists').innerHTML = '';
-		for (var i = 1; i < Object.keys(tmp).length+1; i++) {
-			artist(i,tmp[i]);
+        var artistsObj = data['artists'];
+        var artistsKeys = Object.keys(artistsObj);
+        
+		for (var i = 1; i < artistsKeys.length+1; i++) {
+			artist(i,data);
         }
         $('artists').innerHTML = artistList;
     };
-    xhttp.open("GET", artistsUrl, true);
+    xhttp.open("GET", './data.json', true);
     xhttp.send();
 }
 
-/* releases */
-var releaseList = "";
-function release(id, item){
+// releases //
+var releaseList = '';
+function release(i, data){
     try{
-        var name = item['name'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        var artists = "";
-        for(var i = 1; i < Object.keys(item['artists']).length+1; i++){
-            if(i > 1){
-                artists += ', ';
-            }
-            artists += item['artists'][i]['username'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        }
-        var artwork = artworkPath + item['artwork']['500px'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        releaseList += '<a class="album album-width" href="../album/?id='+(parseInt(id)-1)+'" title="'+name +' - '+artists+'"> <img class="artwork" src="'+artwork+'"> <div class="name">'+name+' - '+artists+'</div> </a>';
+        var releasesObj = data['albums'];
+        var currentKey = (parseInt(i)-1);
+        var currentRelease = releasesObj[currentKey];
+        // set info
+        var currentName = currentRelease['name'];
+        var currentArtistKey = currentRelease['artist'];
+        var artistsObj  = data['artists'];
+        var currentArtist = artistsObj[currentArtistKey]['name'];
+        var currentCover = artworkPath + currentRelease['artwork']['200px'];
+        var currentYear = currentRelease['year'];
+        
+        releaseList += '<a class="album album-width" href="../album/?id='+currentKey+'" title="'+currentName +' - '+currentArtist+'"> <img class="artwork" src="'+currentCover+'"> <div class="name">'+currentName+'<span class="name-spacer"> - </span><span class="name-artists">'+currentArtist+'</span> <div class="year">'+currentYear+'</div> </div> </a>';
     }catch (err){
         console.log(err);
     }
@@ -44,18 +53,18 @@ function release(id, item){
 function loadReleases(type){
     var xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
-        var tmp = JSON.parse(xhttp.responseText);
+        var data = JSON.parse(xhttp.responseText);
+        
+        var releasesObj = data['albums'];
+        var releasesKeys = Object.keys(releasesObj);
+        
 		$('releases').innerHTML = '';
-		for (var i = Object.keys(tmp).length; i > 0; i--) {
-			release(i,tmp[i]);
+		for (var i = releasesKeys.length; i > 0; i--) {
+			release(i,data);
         }
-        $('releases').innerHTML = releaseList + '<span id="release-more-btn" class="album-button album-width" style="display: none;"> <a class="button big" href="./releases/">View All</a> </span>';
-        if(Object.keys(tmp).length >= 4){
-            $('release-more-btn').style.display = "inline-block";
-        }else{
-            $('release-more-btn').style.display = "none";
-        }
+        
+        $('releases').innerHTML = releaseList;
     };
-    xhttp.open("GET", releasesUrl, true);
+    xhttp.open("GET", './data.json', true);
     xhttp.send();
 }

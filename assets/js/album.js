@@ -79,7 +79,7 @@ function loadAlbumInfo(){
         
     };
     //send request for all data
-    xhttp.open("GET", '/data.json', true);
+    xhttp.open("GET", '../data.json', true);
     xhttp.send();
 }
 

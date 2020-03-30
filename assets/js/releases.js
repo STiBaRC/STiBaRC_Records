@@ -1,19 +1,19 @@
-/* releases */
-var releaseList = "";
-function release(id, item){
+// releases //
+var releaseList = '';
+function release(i, data){
     try{
-        var name = item['name'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        var artists = "";
-        for(var i = 1; i < Object.keys(item['artists']).length+1; i++){
-            if(i > 1){
-                artists += ', ';
-            }
-            artists += item['artists'][i]['username'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        }
-        var artwork = artworkPath + item['artwork']['200px'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        var year = item['year'].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        var releasesObj = data['albums'];
+        var currentKey = (parseInt(i)-1);
+        var currentRelease = releasesObj[currentKey];
+        // set info
+        var currentName = currentRelease['name'];
+        var currentArtistKey = currentRelease['artist'];
+        var artistsObj  = data['artists'];
+        var currentArtist = artistsObj[currentArtistKey]['name'];
+        var currentCover = artworkPath + currentRelease['artwork']['200px'];
+        var currentYear = currentRelease['year'];
         
-        releaseList += '<a class="album album-width" href="../album/?id='+(parseInt(id)-1)+'" title="'+name +' - '+artists+'"> <img class="artwork" src="'+artwork+'"> <div class="name">'+name+'<span class="name-spacer"> - </span><span class="name-artists">'+artists+'</span> <div class="year">'+year+'</div> </div> </a>';
+        releaseList += '<a class="album album-width" href="../album/?id='+currentKey+'" title="'+currentName +' - '+currentArtist+'"> <img class="artwork" src="'+currentCover+'"> <div class="name">'+currentName+'<span class="name-spacer"> - </span><span class="name-artists">'+currentArtist+'</span> <div class="year">'+currentYear+'</div> </div> </a>';
     }catch (err){
         console.log(err);
     }
@@ -21,15 +21,18 @@ function release(id, item){
 function loadReleases(type){
     var xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
-        var tmp = JSON.parse(xhttp.responseText);
+        var data = JSON.parse(xhttp.responseText);
+        
+        var releasesObj = data['albums'];
+        var releasesKeys = Object.keys(releasesObj);
+        
 		$('releases').innerHTML = '';
-		for (var i = Object.keys(tmp).length; i > 0; i--) {
-			release(i,tmp[i]);
+		for (var i = releasesKeys.length; i > 0; i--) {
+			release(i,data);
         }
+        
         $('releases').innerHTML = releaseList;
     };
-    xhttp.open("GET", releasesUrl, true);
+    xhttp.open("GET", '../data.json', true);
     xhttp.send();
 }
-
-/* page load */
