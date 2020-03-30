@@ -2,7 +2,7 @@
 var artistList = "";
 function artist(i, data){
     try{
-        var currentKey = (parseInt(i)-1);
+        var currentKey = parseInt(i);
         // set vars
         var artistsObj  = data['artists'][currentKey];
         var pfp         = artworkPath + artistsObj['pfp'];
@@ -21,7 +21,7 @@ function loadArtists(){
         var artistsObj = data['artists'];
         var artistsKeys = Object.keys(artistsObj);
         
-		for (var i = 1; i < artistsKeys.length+1; i++) {
+		for (var i = 0; i < artistsKeys.length; i++) {
 			artist(i,data);
         }
         $('artists').innerHTML = artistList;
@@ -45,7 +45,7 @@ function release(i, data){
         var currentCover = artworkPath + currentRelease['artwork']['200px'];
         var currentYear = currentRelease['year'];
         
-        releaseList += '<a class="album album-width" href="../album/?id='+currentKey+'" title="'+currentName +' - '+currentArtist+'"> <img class="artwork" src="'+currentCover+'"> <div class="name">'+currentName+'<span class="name-spacer"> - </span><span class="name-artists">'+currentArtist+'</span> <div class="year">'+currentYear+'</div> </div> </a>';
+        releaseList += '<a class="album album-width" href="./album/?id='+currentKey+'" title="'+currentName +' - '+currentArtist+'"> <img class="artwork" src="'+currentCover+'"> <div class="name">'+currentName+'<span class="name-spacer"> - </span><span class="name-artists">'+currentArtist+'</span> <div class="year">'+currentYear+'</div> </div> </a>';
     }catch (err){
         console.log(err);
     }
