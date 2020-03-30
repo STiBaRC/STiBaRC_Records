@@ -35,8 +35,6 @@ if(devMode){
     baseAPI = baseUrl;
 }
 
-var releasesUrl = baseAPI+"releases.json";
-var artistsUrl = baseAPI+"artists.json";
 var artworkPath = baseUrl+"assets/images/";
 var pfpPath = baseUrl+"assets/images/";
 
