@@ -24,6 +24,7 @@ function loadAlbumInfo(){
         // get artist from artist ID
         var artist      = data['artists'][artistId]['name'];
         var artistLink  = '../artist/?id='+artistId;
+        var playLink    = '../play/?album='+albumID;
         var year        = albumObj['year'];
         
         var songsObj = albumObj['songs'];
@@ -52,7 +53,9 @@ function loadAlbumInfo(){
                 artists += separator+'<a class="artist-link" href="../artist/?id='+currentArtistKey+'">'+currentArtistName+'</a>';
             }
             var currentSongName = currentSongObj['name'];
-            songs += '<tr> <td>'+(i+1)+'</td> <td>'+currentSongName+'</td> <td>'+artists+'</td> </tr>';
+
+            songs += '<tr class="song-row"> <td><a href="'+playLink+'&song='+(i+1)+'" class="play"><i class="fa fa-play-circle"></i></a><span>'+(i+1)+'</span></td> <td>'+currentSongName+'</td> <td>'+artists+'</td> </tr>';
+            //songs += '<tr> <td>'+(i+1)+'</td> <td>'+currentSongName+'</td> <td>'+artists+'</td> </tr>';
         }
         
         // prep to get links
@@ -64,8 +67,9 @@ function loadAlbumInfo(){
             var currentKey = linkKeys[i];
             var currentLink = linksObj[currentKey];
             var currentIcon = currentKey.toLowerCase();
-            links += '<a href="'+currentLink+'" class="button square outline" title="'+currentKey+'" target="_blank"><i class="fa fa-'+currentIcon+' fa-2x"></i></a>';
+            links += '<a href="'+currentLink+'" class="button medium outline" title="'+currentKey+'" target="_blank"><i class="fa fa-'+currentIcon+' fa-2x"></i></a>';
         }
+        //links += '<a href=href="../play?album="'+albumID+'" class="button medium outline" title="Play on STiBaRC Records"><i class="fa fa-play-circle fa-2x"></i></a>';
         
         // all other info is set
         $('mainCover').src = cover;
@@ -78,6 +82,7 @@ function loadAlbumInfo(){
         $('count').innerHTML = songCount;
         $('songs').innerHTML =  songs;
         $('links').innerHTML = links;
+        $('playLink').href = playLink;
         
     };
     //send request for all data

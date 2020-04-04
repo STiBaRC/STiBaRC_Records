@@ -65,6 +65,18 @@
 #songs {
     border-spacing: 0;
 }
+#songs .play{
+    display: none;
+    color: white;
+}
+/*
+#songs .song-row:hover .play{
+    display: inline-block;
+}
+#songs .song-row:hover span{
+    display: none;
+}
+*/
 .songs-area .artist-link{
     color: white;
 }
@@ -74,7 +86,12 @@
 .songs-area .sep{
     color: var(--light-text);
 }
-
+.songs-area .play-link{
+    margin: 2.5rem 0 1rem 0;
+}
+.songs-area .play-link a{
+    
+}
 @media only screen and (max-width: 1280px){
     .album-top .info #title{
         font-size: 2.75rem;
