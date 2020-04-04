@@ -61,7 +61,7 @@ function loadArtistInfo(){
             var linkData = linksObj['email'];
             var linkHref = 'mailto:'+linkData;
             var currentIcon = 'envelope';
-            links += '<a href="'+linkHref+'" class="button square outline" title="'+linkData+'" target="_blank"><i class="fa fa-'+currentIcon+' fa-2x"></i></a>';
+            links += '<a href="'+linkHref+'" class="button medium outline" title="'+linkData+'" target="_blank"><i class="fa fa-'+currentIcon+' fa-2x"></i></a>';
         }
         
         // all other info is set

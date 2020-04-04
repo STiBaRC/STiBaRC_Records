@@ -233,11 +233,14 @@ hr.lg {
 	font-size: 1rem;
 	padding: 8px 16px;
 }
-.button.square {
+.button.medium {
 	padding: 10px 12px;
 }
-.button.square i{
+.button.medium i {
     font-size: 1.7rem;
+}
+.button.rounded {
+    border-radius: 25px;
 }
 .button:hover {
 	color: var(--buttonColor);
@@ -261,7 +264,7 @@ hr.lg {
 .button.outline.small {
 	padding: 7px 15px;
 }
-.button.outline.square {
+.button.outline.medium {
 	padding: 9px 11px;
 }
 .button.outline:hover {
