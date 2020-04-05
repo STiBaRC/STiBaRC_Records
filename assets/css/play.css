@@ -1,0 +1,18 @@
+.current-song{
+    color: rgb(44, 170, 189);
+}
+.current-song td a{
+    color: rgb(44, 170, 189)!important;
+}
+.play-nav{
+    display: block;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    bottom: 0;
+    background-color: var(--navBg);
+}
+.play-nav .content{
+    margin: 1rem 8px;
+    text-align: center;
+}

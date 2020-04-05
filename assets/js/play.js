@@ -5,16 +5,56 @@ var albumID = parseInt(getAllUrlParams().album);
 
 //playlist vars
 var playlist = [];
+var playingNow = 0;
+var playing = false;
 
-function playAll(){
-    var aE = $('audio');
-    var index = 0;
-    aE.src = playlist[index];
-    aE.play();
-    if(aE.ended){
-        index++;
-        playAll();
+function updateSongList(){
+    const songElements = document.querySelectorAll(".song-row");
+    for (var i = 0; i < songElements.length; i++) {
+        songElements[i].classList.remove('current-song');
     }
+    songElements[playingNow].classList.add('current-song');
+}
+function pause(){
+    $('audio').pause();
+    playing = false;
+}
+function play(){
+    $('audio').play();
+    playing = true;
+}
+function updatePlayBtn(){
+    if(playing){
+        $('main-play').innerHTML = 'Pause';
+    }else if(!playing && $('audio').paused){
+        $('main-play').innerHTML = 'Play';
+    }else{
+        $('main-play').innerHTML = 'Play';
+    }
+}
+function playAll(startIndex){
+    playing = true;
+    playingNow = startIndex;
+    $('audio').src = playlist[playingNow];
+    $('audio').play();
+    updateSongList();
+    updatePlayBtn();
+}
+function nextSong(){
+    if(playingNow == playlist.length-1){
+        playingNow = 0;
+    }else{
+        playingNow++;
+    }
+    playAll(playingNow);
+}
+function backSong(){
+    if(playingNow == 0){
+       playingNow = playlist.length-1;
+    }else{
+        playingNow--;
+    }
+    playAll(playingNow);
 }
 
 function load(){
@@ -72,10 +112,31 @@ function load(){
             var songPath = '../assets/music/';
             var currentSongFile = songPath + albumID + '/' + currentSongName + '.mp3';
             songs += '<tr class="song-row"> <td><a href="'+currentPlayLink+'" class="play"><i class="fa fa-play-circle"></i></a><span>'+currentSongKey+'</span></td> <td>'+currentSongName+'</td> <td>'+artists+'</td> </tr>';
-            //build playlist
+            // build playlist
             playlist.push(currentSongFile);
         }
-        //playAll();
+        // play btn setup
+        $('main-play').addEventListener("click", function(){
+            if(playing){
+                pause();
+            }else if(!playing && $('audio').paused){
+                play();
+            }else{
+                playAll(playingNow);
+            }
+            updatePlayBtn();
+        });
+        // audio setup
+        $('audio').src = playlist[playingNow];
+        
+        $('audio').addEventListener("ended", function(){
+            if(playingNow == playlist.length-1){
+                playingNow = 0;
+            }else{
+                nextSong();
+            }
+            
+        });
         
         // all other info is set
         $('mainCover').src = cover;
