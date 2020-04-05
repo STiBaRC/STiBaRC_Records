@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+        <link rel="icon" type="image/png" href="../assets/images/logo.png">
+        
+        <title>Play - STiBaRC Records</title>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../assets/css/global.css">
+        <link rel="stylesheet" href="../assets/css/album.css">
+        
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="../assets/fonts/fork-awesome/css/fork-awesome.min.css" rel="stylesheet">
+        
+        <!-- More Metadata -->
+        <meta name="keywords" content="stibarc records,stibarc,so this is basically a reddit clone" />
+        <meta name="description" content="STiBaRC Records: Cancer, but it's a record label..">
+        <!-- Open Graph -->
+        <meta property="og:image" content="../assets/images/open-graph.png" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="640" />
+
+    </head>
+    <body>
+            
+        <nav class="clearfix">
+            <div class="container">
+                <span class="mobile-flex">
+                    <span class="flex-grow">
+                        <a class="logo" href="../">
+                            <img class="logo-img" src="../assets/images/logo-white.svg"><span class="text">STiBaRC Records</span>
+                        </a>
+                    </span>
+                    <i class="material-icons mobile-menu-btn noselect" id="mobile-btn">menu</i>
+                </span>
+                <span class="links" id="nav-links" style="display: none">
+                    <a class="" href="../">Home</a>
+                    <a class="" href="../releases/">Releases</a>
+                    <a class="" href="../contact/">Contact</a>
+                    <a class="" href="../about/">About</a>
+                </span>
+            </div>
+        </nav>
+        
+        <main>
+            <div class="container">
+
+                <section style="margin: 7.75rem 0 2rem 0;">
+                    
+                    <div id="load" style="display: block;">
+                        <center><div class="loader"></div></center>
+                    </div>
+                    
+                    <div class="page-part" style="display: none;">
+                        
+                        <div class="album-top ">
+
+                            <img class="album-cover " id="mainCover" src="../assets/images/releases/Test_A-500px.jpg">
+
+                            <span class="info ">
+                                <div id="type">Album</div>
+                                <h1 id="title">Loading</h1>
+                                <div class="artist">By <a id="artist" href="../artist/">Loading</a></div>
+                                <div class="extra">
+                                    <span id="year">Loading</span> • 
+                                    <span id="count"></span> songs
+<!--                                    <i class="fa fa-play" style="vertical-align: middle"></i>&nbsp;-->
+                                    <div id="links">
+                                        <a class="button outline" onclick="playAll()">Play</a>
+                                    </div>
+                                </div>
+                            </span>
+                            
+                        </div>
+                        <br>
+                        <audio id="audio" src="" controls></audio>
+                    </div>
+                    
+                </section>
+                
+                <section>
+                
+                    <div class="page-part" style="display: none;">
+                    
+                        <div class="songs-area" style="margin: 1.5rem 0 2rem 0;">
+
+                            <h1>Songs</h1>
+
+                            <table id="songs" style="width:100%; text-align: left">
+                                
+                                <tr>
+                                    <th>#</th>
+                                    <th>TITLE</th> 
+                                </tr>
+                            
+                            </table>
+
+                        </div>
+                    
+                    </div>
+                
+                </section>
+                
+                
+            </div>
+        </main>
+        
+        <footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2020 <a href="https://records.stibarc.com">STiBaRC Records</a>
+                    <span class="right">
+                        <a href="https://team.stibarc.com" target="_blank">The STiBaRC Team</a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="../assets/js/global.js"></script>
+        <script src="../assets/js/play.js"></script>
+    </body>
+</html>
