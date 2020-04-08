@@ -112,9 +112,13 @@
         <div class="play-nav">
         
             <div class="content">
-                <button class="button outline" onclick="backSong()" style="vertical-align: middle"><i class="fa fa-fast-backward"></i></button>
+                <button class="button outline audio-btn" onclick="backSong()"><i class="fa fa-fast-backward"></i></button>
                 <audio id="audio" src="" style="vertical-align: middle" controls></audio>
-                <button class="button outline" onclick="nextSong()" style="vertical-align: middle"><i class="fa fa-fast-forward"></i></button>
+                <button class="button outline audio-btn" onclick="nextSong()"><i class="fa fa-fast-forward"></i></button>
+            </div>
+            
+            <div id="timeline">    
+  		        <div id="playhead"></div>
             </div>
         
         </div>

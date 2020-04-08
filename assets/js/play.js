@@ -24,7 +24,7 @@ function play(){
     playing = true;
 }
 function updatePlayBtn(){
-    if(playing){
+    if(playing && !$('audio').paused){
         $('main-play').innerHTML = 'Pause';
     }else if(!playing && $('audio').paused){
         $('main-play').innerHTML = 'Play';
@@ -32,13 +32,16 @@ function updatePlayBtn(){
         $('main-play').innerHTML = 'Play';
     }
 }
+function updateStuff(){
+    updateSongList();
+    updatePlayBtn();
+}
 function playAll(startIndex){
     playing = true;
     playingNow = startIndex;
     $('audio').src = playlist[playingNow];
     $('audio').play();
-    updateSongList();
-    updatePlayBtn();
+    updateStuff();
 }
 function nextSong(){
     if(playingNow == playlist.length-1){
@@ -124,7 +127,7 @@ function load(){
             }else{
                 playAll(playingNow);
             }
-            updatePlayBtn();
+            updateStuff();
         });
         // audio setup
         $('audio').src = playlist[playingNow];
@@ -137,6 +140,14 @@ function load(){
             }
             
         });
+        $('audio').onplay = function() {
+            playing = true;
+            updateStuff();
+        };
+        $('audio').onpause = function() {
+            playing = false;
+            updateStuff();
+        };
         
         // all other info is set
         $('mainCover').src = cover;
@@ -157,3 +168,50 @@ function load(){
 
 // puts info into page //
 load();
+
+
+
+// timeline stuff //
+/*
+credit to: https://codepen.io/katzkode/pen/Kfgix
+*/
+var music = $('audio'); // id for audio element
+var duration = music.duration; // Duration of audio clip, calculated here for embedding purposes
+var playhead = $('playhead'); // playhead
+var timeline = $('timeline'); // timeline
+
+// timeline width adjusted for playhead
+var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
+
+// timeupdate event listener
+music.addEventListener("timeupdate", timeUpdate, false);
+
+// returns click as decimal (.77) of the total timelineWidth
+function clickPercent(event) {
+    return (event.clientX - getPosition(timeline)) / timelineWidth;
+}
+
+// Boolean value so that audio position is updated only when the playhead is released
+var onplayhead = true;
+
+// timeUpdate
+// Synchronizes playhead position with current point in audio
+function timeUpdate() {
+    var playPercent = timelineWidth * (music.currentTime / duration);
+    playhead.style.paddingLeft = playPercent + "px";
+    if (music.currentTime == duration) {
+        pButton.className = "";
+        pButton.className = "play";
+    }
+}
+
+// Gets audio file duration
+music.addEventListener("canplaythrough", function() {
+    duration = music.duration;
+}, false);
+
+// getPosition
+// Returns elements left position relative to top-left of viewport
+function getPosition(el) {
+    return el.getBoundingClientRect().left;
+}
