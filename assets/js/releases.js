@@ -29,7 +29,7 @@ function loadReleases(type){
         var releasesKeys = Object.keys(releasesObj);
         
 		$('releases').innerHTML = '';
-		for (var i = releasesKeys.length; i > 0; i--) {
+		for(var i = releasesKeys.length; i > 0; i--){
 			release(i,data);
         }
         
