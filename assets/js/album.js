@@ -42,7 +42,7 @@ function loadAlbumInfo(){
             var artistsKeys = Object.keys(artistsObj);
             var artists = '';
             // for artists in song
-            for (let i = 0; i < artistsKeys.length; i++){
+            for(let i = 0; i < artistsKeys.length; i++){
                 var currentKey = parseInt(artistsKeys[i]);
                 var separator = '';
                 if(currentKey > 0){
@@ -53,8 +53,12 @@ function loadAlbumInfo(){
                 artists += separator+'<a class="artist-link" href="../artist/?id='+currentArtistKey+'">'+currentArtistName+'</a>';
             }
             var currentSongName = currentSongObj['name'];
-
-            songs += '<tr class="song-row"> <td><a href="'+playLink+'&song='+(i+1)+'" class="play"><i class="fa fa-play-circle"></i></a><span>'+(i+1)+'</span></td> <td>'+currentSongName+'</td> <td>'+artists+'</td> </tr>';
+            var currentSongKey = (i+1);
+            var currentPlayLink = playLink+'&song='+currentSongKey;
+            // get song file
+            var songPath = '../assets/music/';
+            var currentSongFile = songPath + albumID + '/' + currentSongName + '.mp3';
+            songs += '<tr class="song-row"> <td><a href="'+currentPlayLink+'" class="play"><i class="fa fa-play-circle"></i></a><span>'+currentSongKey+'</span></td> <td>'+currentSongName+'</td> <td>'+artists+'</td> </tr>';
             //songs += '<tr> <td>'+(i+1)+'</td> <td>'+currentSongName+'</td> <td>'+artists+'</td> </tr>';
         }
         
@@ -63,7 +67,7 @@ function loadAlbumInfo(){
         var linkKeys   = Object.keys(linksObj);
         var links      = '';
         // create link buttons
-        for (let i = 0; i < linkKeys.length; i++){
+        for(let i = 0; i < linkKeys.length; i++){
             var currentKey = linkKeys[i];
             var currentLink = linksObj[currentKey];
             var currentIcon = currentKey.toLowerCase();

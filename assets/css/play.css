@@ -1,9 +1,35 @@
+#songs .song-row:hover{
+    position: relative;
+}
+#songs .song-row:hover .play, #songs .current-song .play{
+    display: inline;
+    position: absolute;
+    margin-top: -13px;
+    align-content: center;
+    font-size: 1.25rem;
+}
+#songs .song-row:not(.current-song) .play:hover i{
+    color: #dbdbdb;
+}
+#songs .song-row .play:active i{
+    color: #cecece;
+}
+.current-song .play i{
+    color: rgb(66, 175, 191);
+}
+.current-song.song-row .play:hover i{
+    color: rgb(74, 189, 206);
+}
+#songs .song-row:hover span, .current-song  span{
+    display: none;
+}
 .current-song{
-    color: rgb(44, 170, 189);
+    color: rgb(66, 175, 191);
 }
 .current-song td a{
-    color: rgb(44, 170, 189)!important;
+    color:rgb(66, 175, 191) !important;
 }
+/* bottom play nav */
 .play-nav{
     display: block;
     position: fixed;
@@ -23,7 +49,7 @@
 }
 #timeline{
 	width: 100%;
-	height: 10px;
+	height: 8px;
     overflow-x: hidden;
 	float: left;
 	background: rgba(0,0,0,.3);
@@ -31,7 +57,7 @@
 }
 #playhead{
 	width: 2px;
-	height: 10px;
+	height: 8px;
 	background: rgba(0, 0, 0,.4);
     overflow-x: hidden;
 }

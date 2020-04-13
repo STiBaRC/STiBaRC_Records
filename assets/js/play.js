@@ -10,8 +10,12 @@ var playing = false;
 
 function updateSongList(){
     const songElements = document.querySelectorAll(".song-row");
-    for (var i = 0; i < songElements.length; i++) {
+    for(var i = 0; i < songElements.length; i++){
         songElements[i].classList.remove('current-song');
+        // fix inline btns
+        var btn = songElements[i].childNodes[1].childNodes[0].childNodes[0];
+        btn.classList.add('fa-play-circle');
+        btn.classList.remove('fa-pause-circle');
     }
     songElements[playingNow].classList.add('current-song');
 }
@@ -24,13 +28,26 @@ function play(){
     playing = true;
 }
 function updatePlayBtn(){
+    // inline btn
+    var btn = $('.current-song')[0].childNodes[1].childNodes[0].childNodes[0];
+    
     if(playing && !$('audio').paused){
+        // not fresh - playing
         $('main-play').innerHTML = 'Pause';
+        btn.classList.add('fa-pause-circle');
+        btn.classList.remove('fa-play-circle');
     }else if(!playing && $('audio').paused){
+        // not fresh - paused
         $('main-play').innerHTML = 'Play';
+        btn.classList.add('fa-play-circle');
+        btn.classList.remove('fa-pause-circle');
     }else{
+        // fresh - not paused
         $('main-play').innerHTML = 'Play';
+        btn.classList.add('fa-play-circle');
+        btn.classList.remove('fa-pause-circle');
     }
+    
 }
 function updateStuff(){
     updateSongList();
@@ -59,7 +76,17 @@ function backSong(){
     }
     playAll(playingNow);
 }
-
+// inline play btn
+function inlinePlay(startIndex){
+    if(playing && playingNow == startIndex){
+        pause();
+    }else if(!playing && $('audio').paused && playingNow == startIndex){
+        play();
+    }else{
+        playAll(startIndex);
+    }
+    updateStuff();
+}
 function load(){
     var xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
@@ -114,7 +141,7 @@ function load(){
             // get song file
             var songPath = '../assets/music/';
             var currentSongFile = songPath + albumID + '/' + currentSongName + '.mp3';
-            songs += '<tr class="song-row"> <td><a href="'+currentPlayLink+'" class="play"><i class="fa fa-play-circle"></i></a><span>'+currentSongKey+'</span></td> <td>'+currentSongName+'</td> <td>'+artists+'</td> </tr>';
+            songs += '<tr class="song-row"> <td><a onclick="inlinePlay('+i+');" class="play"><i class="fa fa-play-circle"></i></a><span>'+currentSongKey+'</span></td> <td>'+currentSongName+'</td> <td>'+artists+'</td> </tr>';
             // build playlist
             playlist.push(currentSongFile);
         }
@@ -128,7 +155,7 @@ function load(){
                 playAll(playingNow);
             }
             updateStuff();
-        });
+        });        
         // audio setup
         $('audio').src = playlist[playingNow];
         

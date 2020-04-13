@@ -69,14 +69,6 @@
     display: none;
     color: white;
 }
-/*
-#songs .song-row:hover .play{
-    display: inline-block;
-}
-#songs .song-row:hover span{
-    display: none;
-}
-*/
 .songs-area .artist-link{
     color: white;
 }
