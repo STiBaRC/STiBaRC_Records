@@ -27,9 +27,15 @@ function loadAlbumInfo(){
         var playLink    = '../play/?album='+albumID;
         var year        = albumObj['year'];
         
-        var songsObj = albumObj['songs'];
+        var songsObj    = albumObj['songs'];
         // get song count
         var songCount   = Object.keys(songsObj).length;
+        var songCountEnd;
+        if(songCount > 1){
+            songCountEnd = 'songs';
+        }else{
+            songCountEnd = 'song';
+        }
         
         // table header
         var songs       = '<tr> <th>#</th> <th>TITLE</th> <th>ARTIST</th> </tr>';
@@ -83,7 +89,7 @@ function loadAlbumInfo(){
         $('artist').innerHTML = artist;
         $('artist').href = artistLink;
         $('year').innerHTML = year;
-        $('count').innerHTML = songCount;
+        $('count').innerHTML = songCount+' '+songCountEnd;
         $('songs').innerHTML =  songs;
         $('links').innerHTML = links;
         $('playLink').href = playLink;
