@@ -56,6 +56,22 @@
                 "Spotify":"https://open.spotify.com/album/63Qesc2XryihUxYE569tzc",
                 "Apple":"https://music.apple.com/us/album/sa-46-dreams-single/1503108592"
             }
+        },
+        {
+            "name":"Persona",
+            "artist":[0],
+            "year":"2020",
+            "artwork":{
+                "full":"releases/Persona.jpg",
+                "500px":"releases/Persona_500px.jpg",
+                "200px":"releases/Persona_200px.jpg"
+            },
+            "genre":"Alternative",
+            "type":"Single",
+            "songs":[6],
+            "links":{
+                "Spotify":"https://open.spotify.com/album/6daxQTOMcUpDYwyLVUGJWp"
+            }
         }
     ],
     "songs":[
@@ -83,6 +99,10 @@
         {
             "name":"Quilt",
             "artists":[1]
+        },
+        {
+            "name":"Persona",
+            "artists":[0]
         }
     ]
 }

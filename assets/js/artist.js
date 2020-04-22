@@ -36,7 +36,7 @@ function loadArtistInfo(){
         }
         // turn keys into somthing useful
         var artistReleases = '';
-        for(let i = 0; i < artistReleasesCount; i++){
+        for(let i = artistReleasesCount-1; i > -1; i--){
             var currentKey = artistReleasesKeys[i];
             currentRelease = releasesObj[currentKey];
             // set info
