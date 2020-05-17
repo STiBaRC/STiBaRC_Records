@@ -72,6 +72,22 @@
             "links":{
                 "Spotify":"https://open.spotify.com/album/6daxQTOMcUpDYwyLVUGJWp"
             }
+        },
+        {
+            "name":"Memory Lane Single",
+            "artist":[0],
+            "year":"2020",
+            "artwork":{
+                "full":"releases/memory_lane_single.png",
+                "500px":"releases/memory_lane_single_500px.jpg",
+                "200px":"releases/memory_lane_single_200px.jpg"
+            },
+            "genre":"Alternative",
+            "type":"Single",
+            "songs":[7],
+            "links":{
+                "Play":"https://records.stibarc.com/play/?album=3"
+            }
         }
     ],
     "songs":[
@@ -102,6 +118,10 @@
         },
         {
             "name":"Persona",
+            "artists":[0]
+        },
+        {
+            "name":"Memory Lane",
             "artists":[0]
         }
     ]
