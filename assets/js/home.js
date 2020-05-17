@@ -47,7 +47,7 @@ function release(i, data){
         var currentCover = imagesBase + currentRelease['artwork']['200px'];
         var currentYear = currentRelease['year'];
         
-        releaseList += '<a class="album album-width" href="./album/?id='+currentKey+'" title="'+currentName +' - '+currentArtist+'"> <img class="artwork" src="'+currentCover+'"> <div class="name">'+currentName+'<span class="name-spacer"> - </span><span class="name-artists">'+currentArtist+'</span> <div class="year">'+currentYear+'</div> </div> </a>';
+        releaseList += '<a class="album album-width" href="./album/?id='+currentKey+'" title="'+currentName +' - '+currentArtist+'"> <img class="artwork" src="'+currentCover+'"> <div class="name"><span>'+currentName+'</span><span class="name-spacer"> - </span><span class="name-artists">'+currentArtist+'</span> <div class="year">'+currentYear+'</div> </div> </a>';
     }catch (err){
         console.log(err);
     }

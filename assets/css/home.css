@@ -49,56 +49,56 @@ main{
 }
 
 .album-width{
-    max-width: 18%;
+    width: 18%;
 }
 @media only screen and (max-width: 1199px){
     .album-width{
-        max-width: 22%;
+        width: 22%;
     }
 }
 @media only screen and (max-width: 1100px){
     .album-width{
-        max-width: 24%;
+        width: 24%;
     }
 }
 @media only screen and (max-width: 1032px){
     .album-width{
-        max-width: 25%;
+        width: 25%;
     }
 }
 @media only screen and (max-width: 920px){
     .album-width{
-        max-width: 26%;
+        width: 26%;
     }
 }
 @media only screen and (max-width: 835px){
     .album-width{
-        max-width: 28%;
+        width: 28%;
     }
 }
 @media only screen and (max-width: 760px){
     .album-width{
-        max-width: 30%;
+        width: 30%;
     }
 }
 @media only screen and (max-width: 720px){
     .album-width{
-        max-width: 32%;
+        width: 32%;
     }
 }
 @media only screen and (max-width: 670px){
     .album-width{
-        max-width: 35%;
+        width: 35%;
     }
 }
 @media only screen and (max-width: 620px){
     .album-width{
-        max-width: 38%;
+        width: 38%;
     }
 }
 @media only screen and (max-width: 600px){
     .album-width{
-        max-width: 40%;
+        width: 40%;
     }
 }
 .releases .artwork{
