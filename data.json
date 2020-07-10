@@ -63,8 +63,8 @@
             "year":"2020",
             "artwork":{
                 "full":"releases/Persona.jpg",
-                "500px":"releases/Persona_500px.jpg",
-                "200px":"releases/Persona_200px.jpg"
+                "500px":"releases/Persona-500px.jpg",
+                "200px":"releases/Persona-200px.jpg"
             },
             "genre":"Alternative",
             "type":"Single",
@@ -80,14 +80,31 @@
             "year":"2020",
             "artwork":{
                 "full":"releases/memory_lane_single.png",
-                "500px":"releases/memory_lane_single_500px.jpg",
-                "200px":"releases/memory_lane_single_200px.jpg"
+                "500px":"releases/memory_lane_single-500px.jpg",
+                "200px":"releases/memory_lane_single-200px.jpg"
             },
             "genre":"Alternative",
             "type":"Single",
             "songs":[7],
             "links":{
                 "Play":"https://records.stibarc.com/play/?album=3"
+            }
+        },
+        {
+            "name":"Memory Lane",
+            "artist":[0],
+            "year":"2020",
+            "artwork":{
+                "full":"releases/memory_lane.png",
+                "500px":"releases/memory_lane-500px.jpg",
+                "200px":"releases/memory_lane-200px.jpg"
+            },
+            "genre":"Alternative",
+            "type":"Album",
+            "songs":[8,9,10,11,12,13,14,15,16,17],
+            "links":{
+                "Spotify":"https://open.spotify.com/album/0UyDe4bjRoumEjB3wEw6pG",
+                "Apple":"https://music.apple.com/us/album/memory-lane/1518845958"
             }
         }
     ],
@@ -123,6 +140,46 @@
         },
         {
             "name":"Memory Lane",
+            "artists":[0]
+        },
+        {
+            "name":"Phantom",
+            "artists":[0]
+        },
+        {
+            "name":"Aura",
+            "artists":[0]
+        },
+        {
+            "name":"Tragedy",
+            "artists":[0]
+        },
+        {
+            "name":"Persona",
+            "artists":[0]
+        },
+        {
+            "name":"Memory Lane",
+            "artists":[0]
+        },
+        {
+            "name":"Lost",
+            "artists":[0]
+        },
+        {
+            "name":"Regrets",
+            "artists":[0]
+        },
+        {
+            "name":"Retribution",
+            "artists":[0]
+        },
+        {
+            "name":"Golden Days",
+            "artists":[0]
+        },
+        {
+            "name":"Epilogue",
             "artists":[0]
         }
     ]
