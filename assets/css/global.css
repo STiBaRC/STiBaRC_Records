@@ -171,14 +171,13 @@ img {
 
 .nav .nav-items .nav-item.active {
     background-color: rgba(255, 255, 255, .95);
-    color: #2b2b2b;
+    color: #42afbf;
     text-shadow: none;
     box-shadow:  1px 1px 3px rgba(40, 40, 40, 0.25);
     border-radius: 25px;
 }
 
 .nav.nav-bg .nav-items .nav-item.active {
-    color: #42afbf;
     box-shadow: none;
 }
 
