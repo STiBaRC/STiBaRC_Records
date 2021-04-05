@@ -13,7 +13,7 @@ body {
 	margin: 0;
 	min-height: 100vh;
     font-family: 'Roboto', sans-serif;
-    background-color: #132222;
+    background-color: #162325;
     color: #fff;
 }
 
@@ -150,7 +150,7 @@ img {
 }
 
 .nav.nav-bg {
-    background-color: #007274;
+    background-color: #277480;
     box-shadow: 0 0 5px rgba(40, 40, 40, 0.26);
 }
 
@@ -173,7 +173,8 @@ img {
 
 .nav .nav-items .nav-item.active {
     background-color: rgba(255, 255, 255, .95);
-    color: #007274;
+    color: #277480;
+    /* 42afbf */
     text-shadow: none;
     box-shadow:  1px 1px 3px rgba(40, 40, 40, 0.25);
     border-radius: 25px;
@@ -193,6 +194,11 @@ img {
 
 .nav .logo {
     height: 60px;
+    -webkit-filter: drop-shadow(1px 1px rgba(40, 40, 40, 0.6));
+}
+
+.nav-bg .logo {
+    -webkit-filter: none;
 }
 
 .nav-height {
