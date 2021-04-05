@@ -16,21 +16,21 @@ body {
 }
 
 /* container */
+
 .container {
 	margin: 0 auto;
-	max-width: 1480px;
 	width: calc(100% - 20px);
 }
 
 @media only screen and (min-width: 601px) {
 	.container {
-		width: 95%;
+		width: 97%;
 	}
 }
 
 @media only screen and (min-width: 993px) {
 	.container {
-		width: 85%;
+		width: 90%;
 	}
 }
 
@@ -134,4 +134,53 @@ img {
 
 .txt-upper {
 	text-transform: uppercase;
+}
+
+/* navigation */
+
+.nav {
+    position: fixed;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: transparent;
+    color: #fff;
+}
+
+.nav .container {
+    display: flex;
+    align-items: center;
+    min-height: 5.5rem;
+}
+
+.nav .nav-item {
+    padding: .25rem;
+}
+
+.nav .nav-items .nav-item {
+    padding: .5rem 1.25rem;
+    margin-right: .5rem;
+}
+
+.nav .nav-items .nav-item.active {
+    background-color: rgba(255, 255, 255, .95);
+    color: #2b2b2b;
+    text-shadow: none;
+    box-shadow:  1px 1px 3px rgba(40, 40, 40, 0.25);
+    border-radius: 25px;
+}
+
+.nav .nav-item span {
+    text-shadow: 1px 1px rgba(40, 40, 40, 0.6);
+}
+
+.nav .nav-items .nav-item.active span {
+    text-shadow: none;
+}
+
+.nav .logo {
+    height: 60px;
+}
+
+.nav-height {
+    height: 5.5rem;
 }
