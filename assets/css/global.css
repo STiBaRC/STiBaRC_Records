@@ -144,19 +144,27 @@ img {
     overflow-x: hidden;
     background-color: transparent;
     color: #fff;
+    transition: all .2s;
+}
+
+.nav.nav-bg {
+    background-color: #42afbf;
+    box-shadow: 0 0 5px rgba(40, 40, 40, 0.26);
 }
 
 .nav .container {
     display: flex;
     align-items: center;
-    min-height: 5.5rem;
+    min-height: 5rem;
 }
 
 .nav .nav-item {
+    line-height: 0;
     padding: .25rem;
 }
 
 .nav .nav-items .nav-item {
+    line-height: normal;
     padding: .5rem 1.25rem;
     margin-right: .5rem;
 }
@@ -169,11 +177,16 @@ img {
     border-radius: 25px;
 }
 
+.nav.nav-bg .nav-items .nav-item.active {
+    color: #42afbf;
+    box-shadow: none;
+}
+
 .nav .nav-item span {
     text-shadow: 1px 1px rgba(40, 40, 40, 0.6);
 }
 
-.nav .nav-items .nav-item.active span {
+.nav .nav-items .nav-item.active span, .nav.nav-bg .nav-items .nav-item span {
     text-shadow: none;
 }
 
@@ -182,5 +195,5 @@ img {
 }
 
 .nav-height {
-    height: 5.5rem;
+    height: 5rem;
 }
