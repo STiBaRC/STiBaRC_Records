@@ -3,3 +3,7 @@
     background-size: cover;
     min-height: 60vh;
 }
+
+.hero h1, .hero .title {
+    font-size: 3rem;
+}
