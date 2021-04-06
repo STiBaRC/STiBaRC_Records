@@ -173,7 +173,12 @@ img {
 .nav .container {
     display: flex;
     align-items: center;
-    min-height: 5rem;
+    min-height: 6rem;
+    transition: all .2s;
+}
+
+.nav-bg .container {
+    min-height: 4.65rem;
 }
 
 .nav .nav-item {
