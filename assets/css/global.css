@@ -278,6 +278,17 @@ img {
     height: 35px;
 }
 
+.footer .separator {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 8px;
+}
+
 .footer .socials a {
-    margin-left: 8px;
+    font-style: italic;
+    margin-left: 6px;
+}
+
+.footer .socials .separator {
+    margin: 0;
+    margin-left: 6px;
 }
