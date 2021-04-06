@@ -149,7 +149,7 @@ img {
 }
 
 .txt-shadow-spread {
-    text-shadow: 0 0 8px rgba(40, 40, 40, 0.35);
+    text-shadow: 0 0 8px rgba(40, 40, 40, 0.38);
 }
 
 /* navigation */
@@ -183,7 +183,7 @@ img {
 
 .nav .nav-items .nav-item {
     line-height: normal;
-    padding: .55rem 1.65rem;
+    padding: .55rem 1.75rem;
     margin-right: .4rem;
 }
 
@@ -209,7 +209,7 @@ img {
 }
 
 .nav .logo {
-    height: 60px;
+    height: 65px;
     -webkit-filter: drop-shadow(1px 1px rgba(40, 40, 40, 0.6));
 }
 
