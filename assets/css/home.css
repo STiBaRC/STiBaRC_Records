@@ -1,10 +1,10 @@
 .hero {
-    background: #013F40 url('../images/bg-blue.jpg') center center no-repeat;
+    background: #819696 url('../images/bg-blue.jpg') center center no-repeat;
     background-size: cover;
     min-height: 65vh;
 }
 
-.hero h1, .hero .title {
+.hero h1 {
     font-size: 3rem;
 }
 

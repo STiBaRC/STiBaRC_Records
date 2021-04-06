@@ -32,7 +32,7 @@ body {
 
 @media only screen and (min-width: 993px) {
 	.container {
-		width: 90%;
+		width: 85%;
 	}
 }
 
@@ -41,6 +41,7 @@ body {
 a {
 	color: inherit;
 	text-decoration: none;
+    transition: color .15s;
 }
 
 img {
@@ -178,18 +179,17 @@ img {
 }
 
 .nav-bg .container {
-    min-height: 4.65rem;
+    min-height: 4.8rem;
 }
 
 .nav .nav-item {
     line-height: 0;
-    padding: .25rem;
 }
 
 .nav .nav-items .nav-item {
     line-height: normal;
-    padding: .55rem 1.75rem;
-    margin-right: .4rem;
+    padding: .55rem 1.65rem;
+    margin-right: .35rem;
 }
 
 .nav .nav-items .nav-item.active {
@@ -232,6 +232,8 @@ img {
     height: 5rem;
 }
 
+/* buttons */
+
 .button {
     display: inline-block;
     text-decoration: none;
@@ -252,4 +254,30 @@ img {
 .button:active {
     background-color: rgb(190, 190, 190);
     box-shadow:  0 0 2px rgba(40, 40, 40, 0.35);
+}
+
+/* footer */
+
+.footer {
+    width: 100%;
+    overflow: hidden;
+    background-color: #284347;
+    color: rgba(255, 255, 255, .66);
+}
+
+.footer .container {
+    padding: 1.5rem 0;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer .logo {
+    line-height: 0;
+    height: 35px;
+}
+
+.footer .socials a {
+    margin-left: 8px;
 }
