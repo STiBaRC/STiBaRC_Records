@@ -1,9 +1,13 @@
 .hero {
     background: #013F40 url('../images/bg-blue.jpg') center center no-repeat;
     background-size: cover;
-    min-height: 60vh;
+    min-height: 65vh;
 }
 
 .hero h1, .hero .title {
     font-size: 3rem;
+}
+
+.hero.flex-all-center {
+    flex-flow: column;
 }

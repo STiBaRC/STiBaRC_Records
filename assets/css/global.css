@@ -199,6 +199,12 @@ img {
     text-shadow: none;
     box-shadow:  1px 1px 3px rgba(40, 40, 40, 0.25);
     border-radius: 25px;
+    transition: all .15s;
+}
+
+.nav .nav-items .nav-item.active:active {
+    background-color: rgb(190, 190, 190);
+    box-shadow:  0 0 2px rgba(40, 40, 40, 0.35);
 }
 
 .nav.nav-bg .nav-items .nav-item.active {
@@ -224,4 +230,26 @@ img {
 
 .nav-height {
     height: 5rem;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    padding: .7rem 1.5rem;
+    background-color: #fff;
+    color: #277480;
+    font-weight: 500;
+    border-radius: 4px;
+    box-shadow:  1px 1px 3px rgba(40, 40, 40, 0.25);
+    transition: all .2s;
+}
+
+.button:hover {
+    background-color: rgb(235, 235, 235);
+    box-shadow:  0 0 4px rgba(40, 40, 40, 0.2);
+}
+
+.button:active {
+    background-color: rgb(190, 190, 190);
+    box-shadow:  0 0 2px rgba(40, 40, 40, 0.35);
 }
