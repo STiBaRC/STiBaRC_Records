@@ -265,7 +265,7 @@ img {
 .footer {
     width: 100%;
     overflow: hidden;
-    background-color: #233235;
+    background-color: #28393d;
     color: rgba(255, 255, 255, 0.52);
 }
 
@@ -299,7 +299,7 @@ img {
 }
 
 .footer .legal {
-    background-color: #1f2d30;
+    background-color: rgba(0, 0, 0, 0.15);
     color: rgba(255, 255, 255, 0.45);
     font-size: 86%;
 }
