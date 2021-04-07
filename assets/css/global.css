@@ -14,7 +14,7 @@ body {
 	min-height: 100vh;
     font-family: 'Roboto', sans-serif;
     background-color: #162325;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* container */
@@ -37,6 +37,10 @@ body {
 }
 
 /* bassics */
+
+h1, h2, h3 {
+    color: rgba(255, 255, 255, 0.97);
+}
 
 a {
 	color: inherit;
@@ -104,6 +108,10 @@ img {
 }
 
 /* text helpers */
+
+.title {
+    font-size: 2.25rem;
+}
 
 .txt-left {
 	text-align: left;
@@ -309,5 +317,5 @@ img {
 }
 
 .footer .copyright {
-    color: rgba(255, 255, 255, 0.38);
+    color: rgba(255, 255, 255, 0.4);
 }
