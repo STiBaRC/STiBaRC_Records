@@ -232,8 +232,9 @@ img {
 }
 
 .nav .logo {
-    height: 65px;
-    -webkit-filter: drop-shadow(1px 1px rgba(40, 40, 40, 0.6));
+	height: 65px;
+	align-self: center;
+	-webkit-filter: drop-shadow(1px 1px rgba(40, 40, 40, 0.6));
 }
 
 .nav-bg .logo {
@@ -318,4 +319,43 @@ img {
 
 .footer .copyright {
     color: rgba(255, 255, 255, 0.4);
+}
+
+/* artists */
+
+.artist {
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 0.5rem;
+	cursor: pointer;
+}
+
+.artist:not(:last-child) {
+	margin-right: 0.5rem;
+}
+
+.pfp {
+	border-radius: 50%;
+}
+
+.artist .pfp {
+	display: block;
+	max-height: 250px;
+	border-radius: 8px;
+}
+
+@media only screen and (max-width: 993px) {
+	.artist .pfp {
+		display: block;
+		max-height: 175px;
+		border-radius: 8px;
+	}
+	.artist .name {
+		font-size: 100%;
+	}
+}
+
+.artist .name {
+	margin: 0.5rem 0 0.25rem 0;
+	text-align: center;
 }
