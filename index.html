@@ -28,15 +28,26 @@
     </head>
     <body>
 
+        <nav id="mobileNav">
+            <div class="nav-items">
+                <a class="nav-item active" href="/"><span>Home</span></a>
+                <a class="nav-item " href="./about/"><span>About</span></a>
+                <a class="nav-item " href="./artists/"><span>Artists</span></a>
+                <a class="nav-item " href="./contact/"><span>Contact</span></a>
+            </div>
+        </nav>
         <nav class="nav" id="nav">
             <div class="container">
                 <a class="nav-item" href="/"><img class="logo" src="./assets/images/records_logo.png"></a>
                 <span class="flex-grow"></span>
-                <span class="nav-items">
+                <span class="nav-items" id="desktopNav">
                     <a class="nav-item active" href="/"><span>Home</span></a>
                     <a class="nav-item " href="./about/"><span>About</span></a>
                     <a class="nav-item " href="./artists/"><span>Artists</span></a>
                     <a class="nav-item " href="./contact/"><span>Contact</span></a>
+                </span>
+                <span class="nav-items" id="mobileNavBtn">
+                    <a class="nav-item icon active" href="#"><span class="material-icons"> menu </span></a>
                 </span>
             </div>
         </nav>
@@ -72,7 +83,7 @@
                         <h2 class="name">Morkle</h2>
                     </a>
                 </div>
-                
+
             </div>
 
             <br /><br />

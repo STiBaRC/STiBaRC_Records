@@ -2,11 +2,15 @@
     background: #819696 url('../images/bg-blue.jpg') center center no-repeat;
     background-size: cover;
     min-height: 65vh;
+    padding: .5rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .hero h1 {
     font-size: 3rem;
     color: #fff;
+    text-align: center;
 }
 
 .hero.flex-all-center {
