@@ -28,12 +28,14 @@
     </head>
     <body>
 
-        <nav id="mobileNav">
-            <div class="nav-items">
-                <a class="nav-item active" href="/"><span>Home</span></a>
-                <a class="nav-item " href="./about/"><span>About</span></a>
-                <a class="nav-item " href="./artists/"><span>Artists</span></a>
-                <a class="nav-item " href="./contact/"><span>Contact</span></a>
+        <nav id="mobileNav" onclick="mobileNav('close')">
+            <div class="container">
+                <div class="nav-items">
+                    <a class="nav-item active" href="/"><span>Home</span></a>
+                    <a class="nav-item " href="./about/"><span>About</span></a>
+                    <a class="nav-item " href="./artists/"><span>Artists</span></a>
+                    <a class="nav-item " href="./contact/"><span>Contact</span></a>
+                </div>
             </div>
         </nav>
         <nav class="nav" id="nav">
@@ -47,7 +49,8 @@
                     <a class="nav-item " href="./contact/"><span>Contact</span></a>
                 </span>
                 <span class="nav-items" id="mobileNavBtn">
-                    <a class="nav-item icon active" href="#"><span class="material-icons"> menu </span></a>
+                    <a id="openMobileNav" class="nav-item icon active" onclick="mobileNav('open')"><span class="material-icons"> menu </span></a>
+                    <a id="closeMobileNav" class="nav-item icon active" onclick="mobileNav('close')"><span class="material-icons"> close </span></a>
                 </span>
             </div>
         </nav>
