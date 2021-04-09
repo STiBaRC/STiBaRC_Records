@@ -176,6 +176,7 @@ img {
     background-color: transparent;
     color: #fff;
     transition: all 0.2s;
+    z-index: 100;
 }
 
 .nav.nav-bg {
@@ -274,7 +275,7 @@ img {
 .footer {
     width: 100%;
     overflow: hidden;
-    background-color: #182e31;
+    background-color: #192d30;
     color: rgba(255, 255, 255, 0.52);
 }
 
@@ -300,7 +301,7 @@ img {
 }
 
 .footer .socials a {
-    margin-left: .6rem;
+    margin-left: .65rem;
 }
 
 .footer .socials a .fa {
