@@ -327,11 +327,16 @@ img {
 	display: inline-block;
 	vertical-align: top;
 	margin-bottom: 0.5rem;
+	background-color: #192729;
+	padding: 1.55rem 1.25rem 1.35rem 1.25rem;
+	border-radius: 8px;
 	cursor: pointer;
+	transition: background-color 0.15s;
+	margin-right: 0.55rem;
 }
 
-.artist:not(:last-child) {
-	margin-right: 0.5rem;
+.artist:hover {
+	background-color: #1d2d30;
 }
 
 .pfp {
@@ -339,23 +344,45 @@ img {
 }
 
 .artist .pfp {
+	box-shadow: 0 2px 26px rgba(0, 0, 0, 0.6);
 	display: block;
-	max-height: 250px;
-	border-radius: 8px;
+	max-height: 185px;
 }
 
 @media only screen and (max-width: 993px) {
 	.artist .pfp {
-		display: block;
-		max-height: 175px;
-		border-radius: 8px;
+		max-height: 170px;
 	}
-	.artist .name {
-		font-size: 100%;
+}
+
+@media only screen and (max-width: 923px) {
+	.artist .pfp {
+		max-height: 165px;
+	}
+}
+
+@media only screen and (max-width: 699px) {
+	.artist .pfp {
+		max-height: 150px;
+	}
+}
+
+@media only screen and (max-width: 632px) {
+	.artists {
+		display: flex;
+		overflow-x: scroll;
+	}
+	.artist {
+		flex-shrink: 0;
+	}
+	.artist .pfp {
+		max-height: 165px;
 	}
 }
 
 .artist .name {
-	margin: 0.5rem 0 0.25rem 0;
+	margin: 1rem 0 0 0;
 	text-align: center;
+	font-size: 1.25rem;
+	font-weight: 500;
 }
