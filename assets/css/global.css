@@ -45,14 +45,24 @@ h1, h2, h3 {
 }
 
 a {
-	color: inherit;
+    color: rgba(255, 255, 255, 0.92);
 	text-decoration: none;
     transition: color 0.15s;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 img {
 	max-width: 100%;
 	border: none;
+}
+
+p {
+    font-family: Open Sans, sans-serif;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.76);
 }
 
 /* helpers */
@@ -113,6 +123,7 @@ img {
 
 .title {
     font-size: 2.25rem;
+    margin-bottom: 1.25rem;
 }
 
 .txt-left {
@@ -199,6 +210,10 @@ img {
 
 .nav .nav-item {
     line-height: 0;
+}
+
+.nav .nav-item:hover {
+    text-decoration: none;
 }
 
 .nav .nav-items .nav-item, #mobileNav .nav-items .nav-item {
@@ -324,6 +339,7 @@ img {
 }
 
 .button:hover {
+    text-decoration: none;
     background-color: rgb(235, 235, 235);
     box-shadow:  0 0 4px rgba(40, 40, 40, 0.2);
 }
@@ -361,8 +377,13 @@ img {
     }
 }
 
+.footer a {
+    color: rgba(255, 255, 255, 0.79);
+}
+
 .footer a:hover {
-    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.92);
 }
 
 .footer .logo {
@@ -419,6 +440,7 @@ img {
 }
 
 .artist:hover {
+    text-decoration: none;
 	background-color: #1d2d30;
 }
 
