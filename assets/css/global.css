@@ -126,6 +126,10 @@ p {
     margin-bottom: 1.25rem;
 }
 
+.title.big {
+    font-size: 2.5rem;
+}
+
 .txt-left {
 	text-align: left;
 }
@@ -327,7 +331,7 @@ p {
 /* main container */
 
 main.container {
-    min-height: calc(100vh - 16.65rem);
+    min-height: calc(100vh - 16.85rem);
 }
 
 /* buttons */
@@ -369,13 +373,13 @@ main.container {
     padding: 1.65rem 0;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 501px) {
     .footer > .container {
         flex-direction: column;
     }
 
     .footer .socials {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         margin-bottom: 0.5rem;
     }
 
@@ -428,6 +432,16 @@ main.container {
     color: rgba(255, 255, 255, 0.4);
 }
 
+/* pfp */
+
+.pfp {
+	border-radius: 50%;
+}
+
+.pfp.shadow {
+    box-shadow: 0 2px 26px rgba(0, 0, 0, 0.6);
+}
+
 /* artists */
 
 .artists {
@@ -437,7 +451,7 @@ main.container {
 .artist {
 	display: inline-block;
 	vertical-align: top;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.55rem;
 	background-color: #192729;
 	padding: 1.55rem 1.25rem 1.35rem 1.25rem;
 	border-radius: 8px;
@@ -449,10 +463,6 @@ main.container {
 .artist:hover {
     text-decoration: none;
 	background-color: #1d2d30;
-}
-
-.pfp {
-	border-radius: 50%;
 }
 
 .artist .pfp {
@@ -479,15 +489,10 @@ main.container {
 	}
 }
 
-@media only screen and (max-width: 632px) {
+@media only screen and (max-width: 650px) {
 	.artists {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-	}
-
-	.artist {
-		flex-shrink: 0;
+		text-align: center;
+        margin: 0 .275rem;
 	}
 
 	.artist .pfp {
@@ -497,7 +502,7 @@ main.container {
 
 @media only screen and (max-width: 445px) {
 	.artist .pfp {
-		max-height: 125px;
+		max-height: 140px;
 	}
 }
 

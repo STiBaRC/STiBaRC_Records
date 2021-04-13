@@ -1,0 +1,25 @@
+.person {
+    display: inline-block;
+    margin-right: 1.25rem;
+}
+
+.person h2 {
+    text-align: center;
+    margin-top: 0.75rem;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.person img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+@media only screen and (max-width: 801px) {
+	.people {
+        text-align: center;
+    }
+
+    .person {
+        margin: 0 0.625rem;
+    }
+}
