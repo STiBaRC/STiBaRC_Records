@@ -324,6 +324,12 @@ p {
 	}
 }
 
+/* main container */
+
+main.container {
+    min-height: calc(100vh - 16.65rem);
+}
+
 /* buttons */
 
 .button {
@@ -352,6 +358,7 @@ p {
 /* footer */
 
 .footer {
+    margin-top: 2rem;
     width: 100%;
     overflow: hidden;
     background-color: #192d30;
