@@ -337,10 +337,12 @@ main.container {
 /* buttons */
 
 .button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
     text-decoration: none;
     text-align: center;
-    padding: 0.7rem 1.65rem;
+    padding: 0.7rem 1.75rem;
     background-color: #fff;
     color: #277480;
     font-weight: 500;
@@ -358,6 +360,29 @@ main.container {
 .button:active {
     background-color: rgb(190, 190, 190);
     box-shadow:  0 0 2px rgba(40, 40, 40, 0.35);
+}
+
+.button.icon .material-icons, .button.icon .fa {
+    font-size: 24px;
+}
+
+.button.icon.left .material-icons, .button.icon.left .fa {
+    margin-right: 8px;
+}
+
+.button.icon.right .material-icons, .button.icon.right .fa {
+    margin-left: 8px;
+}
+
+.button .material-icons {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* button groups */
+
+.btn-group .button:not(:last-child) {
+    margin-right: 0.5rem;
 }
 
 /* footer */
