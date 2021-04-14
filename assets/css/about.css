@@ -10,8 +10,8 @@
 }
 
 .person img {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 160px;
+    max-height: 160px;
 }
 
 @media only screen and (max-width: 801px) {
@@ -21,5 +21,10 @@
 
     .person {
         margin: 0 0.625rem;
+    }
+
+    .person img {
+        max-width: 150px;
+        max-height: 150px;
     }
 }
