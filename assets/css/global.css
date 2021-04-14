@@ -331,7 +331,7 @@ p {
 /* main container */
 
 main.container {
-    min-height: calc(100vh - 16.85rem);
+    min-height: calc(100vh - 18.55rem);
 }
 
 /* buttons */
