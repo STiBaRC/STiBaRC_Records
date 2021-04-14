@@ -216,7 +216,7 @@ p {
     line-height: 0;
 }
 
-.nav .nav-item:hover {
+.nav .nav-item:hover, #mobileNav .nav-item:hover {
     text-decoration: none;
 }
 
@@ -339,7 +339,8 @@ main.container {
 .button {
     display: inline-block;
     text-decoration: none;
-    padding: 0.7rem 1.5rem;
+    text-align: center;
+    padding: 0.7rem 1.65rem;
     background-color: #fff;
     color: #277480;
     font-weight: 500;
@@ -362,7 +363,7 @@ main.container {
 /* footer */
 
 .footer {
-    margin-top: 4rem;
+    margin-top: 3.75rem;
     width: 100%;
     overflow: hidden;
     background-color: #192d30;
@@ -389,7 +390,7 @@ main.container {
 }
 
 .footer a {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.72);
 }
 
 .footer a:hover {
@@ -451,13 +452,13 @@ main.container {
 .artist {
 	display: inline-block;
 	vertical-align: top;
-	margin-bottom: 0.55rem;
-	background-color: #192729;
-	padding: 1.55rem 1.25rem 1.35rem 1.25rem;
+	margin-bottom: 0.5rem;
+	margin-right: 0.5rem;
+    background-color: #192729;
+	padding: 1.25rem 1rem 1rem 1rem;
 	border-radius: 8px;
 	cursor: pointer;
-	transition: background-color 0.15s;
-	margin-right: 0.55rem;
+	transition: all 0.15s;
 }
 
 .artist:hover {
@@ -468,7 +469,8 @@ main.container {
 .artist .pfp {
 	box-shadow: 0 2px 26px rgba(0, 0, 0, 0.6);
 	display: block;
-	max-height: 185px;
+    margin: 0 auto;
+	max-height: 180px;
 }
 
 @media only screen and (max-width: 993px) {
@@ -500,15 +502,44 @@ main.container {
 	}
 }
 
-@media only screen and (max-width: 445px) {
+@media only screen and (max-width: 470px) {
 	.artist .pfp {
 		max-height: 140px;
 	}
 }
 
+@media only screen and (max-width: 445px) {
+	.artist .pfp {
+		max-height: 135px;
+	}
+}
+
+@media only screen and (max-width: 408px) {
+	.artist .pfp {
+		max-height: 130px;
+	}
+}
+
+@media only screen and (max-width: 394px) {
+	.artist .pfp {
+		max-height: 120px;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.artist {
+        display: block;
+        width: 100%;
+    }
+
+    .artist .pfp {
+		max-height: 125px;
+	}
+}
+
 .artist .name {
-	margin: 1rem 0 0 0;
+    color: rgba(255, 255, 255, 0.92);
+	margin: 0.85rem 0 0.25rem 0;
 	text-align: center;
-	font-size: 1.25rem;
-	font-weight: 500;
+	font-size: 1.35rem;
 }
