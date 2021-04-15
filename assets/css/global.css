@@ -276,7 +276,7 @@ p {
 }
 
 .nav-height {
-    height: 5rem;
+    height: 4.8rem;
 }
 
 /* mobile navigation */
@@ -331,7 +331,7 @@ p {
 /* main container */
 
 main.container {
-    min-height: calc(100vh - 18.55rem);
+    min-height: calc(100vh - 17.95rem);
 }
 
 /* buttons */
@@ -405,7 +405,7 @@ main.container {
 /* footer */
 
 .footer {
-    margin-top: 3.75rem;
+    margin-top: 3.35rem;
     width: 100%;
     overflow: hidden;
     background-color: #192d30;
