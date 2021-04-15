@@ -475,6 +475,47 @@ main.container {
     color: rgba(255, 255, 255, 0.4);
 }
 
+/* loading spiner */
+
+.loader-container {
+    display: block;
+    margin: 1rem auto;
+}
+
+.loader {
+	border: 5px solid transparent;
+	border-radius: 50%;
+	border-top: 5px solid #347079;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	width: 25px;
+	height: 25px;
+    margin: auto;
+	-webkit-animation: spin 0.4s linear infinite;
+	animation: spin 0.4s linear infinite;
+}
+
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
 /* pfp */
 
 .pfp {
