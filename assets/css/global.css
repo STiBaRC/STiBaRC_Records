@@ -339,6 +339,7 @@ main.container {
 .button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     vertical-align: middle;
     text-decoration: none;
     text-align: center;
@@ -381,8 +382,19 @@ main.container {
 
 /* button groups */
 
+.btn-group .button {
+    margin-bottom: 0.55rem;
+}
+
 .btn-group .button:not(:last-child) {
-    margin-right: 0.5rem;
+    margin-right: 0.55rem;
+}
+
+@media only screen and (max-width: 450px) {
+    .btn-group .button {
+        margin-right: 0!important;
+        display: flex;
+    }
 }
 
 /* footer */
