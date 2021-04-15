@@ -363,6 +363,11 @@ main.container {
     box-shadow:  0 0 2px rgba(40, 40, 40, 0.35);
 }
 
+.button:focus {
+    background-color: rgb(190, 190, 190);
+    box-shadow:  0 0 2px rgba(40, 40, 40, 0.35);
+}
+
 .button.icon .material-icons, .button.icon .fa {
     font-size: 24px;
 }
@@ -492,7 +497,7 @@ main.container {
 	margin-bottom: 0.5rem;
 	margin-right: 0.5rem;
     background-color: #192729;
-	padding: 1.25rem 1rem 1rem 1rem;
+	padding: 1.35rem 1.15rem 0.9rem 1.15rem;
 	border-radius: 8px;
 	cursor: pointer;
 	transition: all 0.15s;
