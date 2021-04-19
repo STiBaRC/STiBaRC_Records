@@ -130,6 +130,10 @@ p {
     font-size: 2.5rem;
 }
 
+.title.small {
+    font-size: 1.85rem;
+}
+
 .txt-left {
 	text-align: left;
 }
@@ -199,6 +203,10 @@ p {
 .nav.nav-bg {
     background-color: #277480;
     box-shadow: 0 0 5px rgba(40, 40, 40, 0.28);
+}
+
+.nav.nav-bg.black {
+    background-color: rgba(0, 0, 0, 0.98);
 }
 
 .nav .container {

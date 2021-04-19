@@ -1,5 +1,5 @@
 main.container {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     margin-bottom: 4rem;
     min-height: 35.85vh;
 }
@@ -7,19 +7,24 @@ main.container {
 .profile-hero {
 	position: relative;
 	width: 100%;
-	min-height: 340px;
-	height: 40vh;
+	min-height: 280px;
+	height: 30vh;
 	max-height: none;
 	background: #192729 url() center center no-repeat;
 	background-size: cover;
+	z-index: -5;
+	padding-top: 4.5rem;
+	padding-bottom: 1rem;
 }
 
 .profile-hero .bg-overlay {
 	top: 0;
 	left: 0;
+	position: absolute;
 	height: 100%;
 	width: 100%;
 	background: rgba(0, 0, 0, 0.23);
+	z-index: -2;
 }
 
 .profile-hero .top-grade {
@@ -29,4 +34,33 @@ main.container {
 	top: -1px;
 	height: 50%;
 	background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.37));
+	z-index: -3;
+}
+
+.hero-content {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 5;
+}
+
+.profile-pfp {
+	display: block;
+	/* margin: -75px 0 0 0; */
+	max-height: 200px;
+	/* z-index: 2; */
+}
+
+@media only screen and (max-width: 801px) {
+	.profile-pfp {
+		max-height: 180px;
+	}
+}
+
+.hero-content .container .title {
+	margin: 0;
+	margin-left: 1.5rem;
+	font-size: 3.5rem;
+	color: #fff;
 }
