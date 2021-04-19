@@ -6,10 +6,10 @@ if(links == "artist") {
     redirect = '/artist/';
     switch(id) {
         case 0 :
-            redirect += "Alluthus/"
+            redirect += "alluthus/"
             break;
         case 1 :
-            redirect += "Bunnbuns/"
+            redirect += "bunnbuns/"
             break;
         case 2 :
             redirect += "herronjo/"

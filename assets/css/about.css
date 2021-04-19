@@ -1,6 +1,6 @@
 .person {
     display: inline-block;
-    margin-right: 1.25rem;
+    margin-right: 1.35rem;
 }
 
 .person .pfp {
@@ -22,7 +22,7 @@
     }
 
     .person {
-        margin: 0 0.625rem;
+        margin: 0 0.675rem;
     }
 
     .person img {

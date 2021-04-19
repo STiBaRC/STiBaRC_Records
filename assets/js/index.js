@@ -5,7 +5,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-	if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 		$("nav").classList.add('nav-bg');
 	} else {
 		$("nav").classList.remove('nav-bg');
