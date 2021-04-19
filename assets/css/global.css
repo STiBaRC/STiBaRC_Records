@@ -403,7 +403,7 @@ main.container {
     margin-right: 0.55rem;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 465px) {
     .btn-group .button {
         margin-right: 0!important;
         display: flex;
