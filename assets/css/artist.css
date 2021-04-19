@@ -20,8 +20,8 @@ main.container {
 	background: #192729 url() center center no-repeat;
 	background-size: cover;
 	z-index: -5;
-	padding-top: 4.75rem;
-	padding-bottom: 1.25rem;
+	padding-top: 4.85rem;
+	padding-bottom: 1.5rem;
 }
 
 .profile-hero .bg-overlay {
