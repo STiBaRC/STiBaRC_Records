@@ -87,6 +87,11 @@ p {
 	flex-grow: 1;
 }
 
+.vam {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .dsp-i {
 	display: inline;
 }
@@ -543,8 +548,8 @@ main.container {
 .artist {
 	display: inline-block;
 	vertical-align: top;
-	margin-bottom: 0.5rem;
-	margin-right: 0.5rem;
+	margin-bottom: 0.45rem;
+	margin-right: 0.45rem;
     background-color: #192729;
 	padding: 1.35rem 1.15rem 0.9rem 1.15rem;
 	border-radius: 8px;
@@ -585,7 +590,7 @@ main.container {
 @media only screen and (max-width: 650px) {
 	.artists {
 		text-align: center;
-        margin: 0 .275rem;
+        margin: 0 .225rem;
 	}
 
 	.artist .pfp {

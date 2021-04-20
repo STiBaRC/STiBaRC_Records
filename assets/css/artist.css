@@ -14,14 +14,14 @@ main.container {
 .profile-hero {
 	position: relative;
 	width: 100%;
-	min-height: 300px;
+	min-height: 325px;
 	height: 30vh;
 	max-height: none;
 	background: #192729 url() center center no-repeat;
 	background-size: cover;
 	z-index: -5;
-	padding-top: 4.85rem;
-	padding-bottom: 1.5rem;
+	padding-top: 5rem;
+	padding-bottom: 2.85rem;
 }
 
 .profile-hero .bg-overlay {
@@ -30,7 +30,7 @@ main.container {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background: rgba(0, 0, 0, 0.23);
+	background: rgba(0, 0, 0, 0.25);
 	z-index: -2;
 }
 
@@ -72,8 +72,8 @@ main.container {
 
 @media only screen and (max-width: 629px) {
 	.profile-hero {
-		padding-top: 5.65rem;
-		padding-bottom: 2rem;
+		padding-top: 5.85rem;
+		padding-bottom: 3rem;
 	}
 
 	.hero-content .container {
