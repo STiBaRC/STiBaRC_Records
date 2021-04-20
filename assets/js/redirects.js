@@ -14,6 +14,9 @@ if(links == "artist") {
         case 2 :
             redirect += "herronjo/"
             break;
+        case 3 :
+            redirect += "morkle/"
+            break
         default :
             redirect = "/404.html";
     }
@@ -21,4 +24,6 @@ if(links == "artist") {
     redirect = "/404.html";
 }
 
-window.location.replace(redirect);
+setTimeout( () => {
+    window.location.replace(redirect);
+}, 50);
