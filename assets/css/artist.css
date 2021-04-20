@@ -30,7 +30,7 @@ main.container {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background: rgba(0, 0, 0, 0.25);
+	background: rgba(0, 0, 0, 0.26);
 	z-index: -2;
 }
 
