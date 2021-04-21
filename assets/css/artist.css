@@ -17,7 +17,7 @@ main.container {
 	min-height: 325px;
 	height: 30vh;
 	max-height: none;
-	background: #192729 url() center center no-repeat;
+	background: #1c4046 url() center center no-repeat;
 	background-size: cover;
 	z-index: -5;
 	padding-top: 5rem;
