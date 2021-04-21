@@ -1,0 +1,32 @@
+.person {
+    display: inline-block;
+    margin-right: 1.35rem;
+}
+
+.person .pfp {
+    display: block;
+    margin: 0 auto;
+    max-width: 160px;
+    max-height: 160px;
+}
+
+.person h2 {
+    text-align: center;
+    margin-top: 0.75rem;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+@media only screen and (max-width: 801px) {
+	.people {
+        text-align: center;
+    }
+
+    .person {
+        margin: 0 0.675rem;
+    }
+
+    .person img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+}

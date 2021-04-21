@@ -1,49 +1,87 @@
-.artist-top{
-    
+main.container {
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
+    min-height: 35.85vh;
 }
-.artist-top .pfp{
-    display: inline-block;
-    vertical-align: middle;
-    border-radius: 50%;
-    max-width: 225px;
-    margin-right: 1rem;
-}
-.artist-top .info{
-    display: inline-block;
-    vertical-align: middle;
-}
-.artist-top .info #name{
-    font-size: 2.75rem;
-    font-weight: 700;
-}
-.artist-top .info #links{
-    margin: .5rem 0 0 0;
-}
-@media only screen and (max-width: 1280px){
-    .artist-top .info #name{
-        font-size: 2.75rem;
+
+@media only screen and (max-width: 575px) {
+    .btn-group .button {
+        margin-right: 0!important;
+        display: flex;
     }
 }
-@media only screen and (max-width: 986px){
-    .album-cover{
-        max-width: 300px;
-    }
+
+.profile-hero {
+	position: relative;
+	width: 100%;
+	min-height: 325px;
+	height: 30vh;
+	max-height: none;
+	background: #1c4046 url() center center no-repeat;
+	background-size: cover;
+	z-index: -5;
+	padding-top: 5rem;
+	padding-bottom: 2.85rem;
 }
-@media only screen and (max-width: 745px){
-    .artist-top .pfp{
-        display: block;
-        text-align: center;
-        margin: 0 auto .5rem auto;
-        max-width: 100%;
-    }
-    .artist-top .info{
-        display: block;
-        margin: 0 auto 0 auto;
-        text-align: center;
-    }
+
+.profile-hero .bg-overlay {
+	top: 0;
+	left: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.26);
+	z-index: -2;
 }
-.oop{
-    margin-top: 3rem;
-    color: rgba(255,255,255,0.45);
-    font-weight: 500;
+
+.profile-hero .top-grade {
+	right: 0;
+	left: 0;
+	position: absolute;
+	top: -1px;
+	height: 50%;
+	background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.37));
+	z-index: -3;
+}
+
+.hero-content {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 5;
+}
+
+.profile-pfp {
+	display: block;
+	max-height: 200px;
+}
+
+@media only screen and (max-width: 801px) {
+	.profile-pfp {
+		max-height: 180px;
+	}
+}
+
+.hero-content .container .title {
+	margin: 0;
+	margin-left: 1.5rem;
+	font-size: 3.5rem;
+	color: #fff;
+}
+
+@media only screen and (max-width: 629px) {
+	.profile-hero {
+		padding-top: 5.85rem;
+		padding-bottom: 3rem;
+	}
+
+	.hero-content .container {
+		flex-direction: column;
+	}
+
+	.hero-content .container .title {
+		margin-left: 0;
+		margin-top: 1.25rem;
+	}
 }

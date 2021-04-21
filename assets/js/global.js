@@ -1,67 +1,35 @@
-function $(id){  //less typing
-    if(id.startsWith(".")){
-        return document.getElementsByClassName(id.substring(1));
-    }else{
-        return document.getElementById(id);
-    }
+function $(id) {
+	if (id.startsWith(".")) {
+		return document.getElementsByClassName(id.substring(1));
+	} else {
+		return document.getElementById(id);
+	}
 }
 
-/* nav mobile menu & button */
-document.addEventListener("click", function(event) {
-    var isClickInside = $('mobile-btn').contains(event.target);
-    var navLinks = $('nav-links').contains(event.target);
-    
-    if($("nav-links").style.display == "none" || $("nav-links").style.display == ""  || navLinks){
-        $('nav-links').style.display = "block";
-    }else{
-        $("nav-links").style.display = "none";
-    }
-    if (!isClickInside && !navLinks) {
-        //the click was outside the nav dropdown
-        $("nav-links").style.display = "none";
-    }
-});
-
-
-// func to show or hide a page part //
-function pagePartsDisplay(d){
-    const allPages = document.querySelectorAll(".page-part");
-    for (var i = 0; i < allPages.length; i++) {
-        allPages[i].style.display = d;
-    }
-}
-// get url params //
-function getAllUrlParams(url) {
-	var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+function getAllUrlParams() {
+	var queries = location.search.slice(1).split("&");
 	var obj = {};
-	if (queryString) {
-		queryString = queryString.split('#')[0];
-		var arr = queryString.split('&');
-		for (var i = 0; i < arr.length; i++) {
-			var a = arr[i].split('=');
-			var paramNum = undefined;
-			var paramName = a[0].replace(/\[\d*\]/, function (v) {
-				paramNum = v.slice(1, -1);
-				return '';
-			});
-			var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
-			paramName = paramName;
-			paramValue = paramValue;
-			if (obj[paramName]) {
-				if (typeof obj[paramName] === 'string') {
-					obj[paramName] = [obj[paramName]];
-				}
-				if (typeof paramNum === 'undefined') {
-					obj[paramName].push(paramValue);
-				}
-				else {
-					obj[paramName][paramNum] = paramValue;
-				}
-			}
-			else {
-				obj[paramName] = paramValue;
-			}
+	for (var i in queries) {
+		if (queries[i] != "") {
+			var tmp = queries[i].split("=");
+			obj[decodeURIComponent(tmp[0])] = decodeURIComponent(tmp[1]);
 		}
 	}
 	return obj;
+}
+
+function mobileNav(action) {
+	if (action == "open") {
+		$("openMobileNav").style.display = "none";
+		$("closeMobileNav").style.display = "inline-flex";
+		$("mobileNav").style.display = "block";
+		document.getElementsByTagName("body")[0].style.maxHeight = "100vh";
+		document.getElementsByTagName("body")[0].style.overflow = "hidden";
+	} else {
+		$("openMobileNav").style.display = "inline-flex";
+		$("closeMobileNav").style.display = "none";
+		$("mobileNav").style.display = "none";
+		document.getElementsByTagName("body")[0].style.maxHeight = "auto";
+		document.getElementsByTagName("body")[0].style.overflow = "";
+	}
 }
