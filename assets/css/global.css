@@ -385,11 +385,11 @@ main.container {
     font-size: 24px;
 }
 
-.button.icon.left .material-icons, .button.icon.left .fa {
+.button.icon.left .material-icons, .button.icon.left .fa, .button.icon.left img.icon  {
     margin-right: 8px;
 }
 
-.button.icon.right .material-icons, .button.icon.right .fa {
+.button.icon.right .material-icons, .button.icon.right .fa, .button.icon.right img.icon {
     margin-left: 8px;
 }
 
@@ -413,6 +413,14 @@ main.container {
         margin-right: 0!important;
         display: flex;
     }
+}
+
+/* icons */
+
+img.icon {
+    display: inline-block;
+    vertical-align: middle;
+    height: 24px;
 }
 
 /* footer */
