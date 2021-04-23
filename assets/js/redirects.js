@@ -26,4 +26,4 @@ if(links == "artist") {
 
 setTimeout( () => {
     window.location.replace(redirect);
-}, 50);
+}, 15);
