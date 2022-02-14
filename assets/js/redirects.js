@@ -2,28 +2,28 @@ const id = parseInt(getAllUrlParams().id);
 
 var redirect = '';
 
-if(links == "artist") {
+if (links == "artist") {
     redirect = '/artist/';
-    switch(id) {
-        case 0 :
+    switch (id) {
+        case 0:
             redirect += "alluthus/"
             break;
-        case 1 :
+        case 1:
             redirect += "bunnbuns/"
             break;
-        case 2 :
+        case 2:
             redirect += "herronjo/"
             break;
-        case 3 :
+        case 3:
             redirect += "morkle/"
             break
-        default :
+        default:
             redirect = "/404.html";
     }
 } else {
     redirect = "/404.html";
 }
 
-setTimeout( () => {
+setTimeout(() => {
     window.location.replace(redirect);
 }, 15);
