@@ -24,7 +24,8 @@ main.container {
 	padding-bottom: 2.85rem;
 }
 
-.profile-hero .bg-overlay {
+.profile-hero::before {
+	content: "";
 	top: 0;
 	left: 0;
 	position: absolute;
@@ -35,7 +36,8 @@ main.container {
 	z-index: -2;
 }
 
-.profile-hero .top-grade {
+.profile-hero::after {
+	content: "";
 	right: 0;
 	left: 0;
 	position: absolute;
