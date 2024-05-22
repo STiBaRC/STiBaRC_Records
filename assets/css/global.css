@@ -1592,3 +1592,10 @@ img.icon {
     text-align: center;
     font-size: 1.35rem;
 }
+
+.albumcovers {
+    border-radius: 2%;
+    box-shadow: 0 2px 26px rgba(0, 0, 0, 0.6);
+    display: block;
+    max-height: 400px;
+}
