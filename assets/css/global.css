@@ -1326,15 +1326,15 @@ main.container {
     box-shadow: 0 0 2px rgba(40, 40, 40, 0.35);
 }
 
-.button.icon .material-icons, .button.icon .fa {
+.button.icon .material-icons, .button.icon .fa, .button.icon .fa-brands {
     font-size: 24px;
 }
 
-.button.icon.left .material-icons, .button.icon.left .fa, .button.icon.left img.icon {
+.button.icon.left .material-icons, .button.icon.left .fa, .button.icon.left .fa-brands, .button.icon.left img.icon {
     margin-right: 8px;
 }
 
-.button.icon.right .material-icons, .button.icon.right .fa, .button.icon.right img.icon {
+.button.icon.right .material-icons, .button.icon.right .fa, .button.icon.right .fa-brands, .button.icon.right img.icon {
     margin-left: 8px;
 }
 
