@@ -1,7 +1,10 @@
+name: Deploy main to production
+
 on:
   push:
     branches:
       - main
+      - master
 
 jobs:
   deploy:
