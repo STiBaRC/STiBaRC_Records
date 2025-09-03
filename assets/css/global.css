@@ -1183,6 +1183,7 @@ p {
     align-items: center;
     line-height: normal;
     color: #fff;
+    font-weight: 600;
     padding: 0.6rem 1.65rem;
     margin-right: 0.35rem;
     cursor: pointer;
