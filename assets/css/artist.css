@@ -58,12 +58,14 @@ main.container {
 
 .profile-pfp {
 	display: block;
-	max-height: 200px;
+	height: 200px;
+	width: 200px;
 }
 
 @media only screen and (max-width: 801px) {
 	.profile-pfp {
-		max-height: 180px;
+		height: 180px;
+		width: 180px;
 	}
 }
 

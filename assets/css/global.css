@@ -1486,6 +1486,7 @@ img.icon {
 
 .pfp {
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .pfp.shadow {
@@ -1519,24 +1520,28 @@ img.icon {
     box-shadow: 0 2px 26px rgba(0, 0, 0, 0.6);
     display: block;
     margin: 0 auto;
-    max-height: 180px;
+    height: 180px;
+    width: 180px;
 }
 
 @media only screen and (max-width: 993px) {
     .artist .pfp {
-        max-height: 170px;
+        height: 170px;
+        width: 170px;
     }
 }
 
 @media only screen and (max-width: 923px) {
     .artist .pfp {
-        max-height: 165px;
+        height: 165px;
+        width: 165px;
     }
 }
 
 @media only screen and (max-width: 699px) {
     .artist .pfp {
-        max-height: 150px;
+        height: 150px;
+        width: 150px;
     }
 }
 
@@ -1547,31 +1552,36 @@ img.icon {
     }
 
     .artist .pfp {
-        max-height: 165px;
+        height: 165px;
+        width: 165px;
     }
 }
 
 @media only screen and (max-width: 470px) {
     .artist .pfp {
-        max-height: 140px;
+        height: 140px;
+        width: 140px;
     }
 }
 
 @media only screen and (max-width: 445px) {
     .artist .pfp {
-        max-height: 135px;
+        height: 135px;
+        width: 135px;
     }
 }
 
 @media only screen and (max-width: 408px) {
     .artist .pfp {
-        max-height: 130px;
+        height: 130px;
+        width: 130px;
     }
 }
 
 @media only screen and (max-width: 394px) {
     .artist .pfp {
-        max-height: 120px;
+        height: 120px;
+        width: 120px;
     }
 }
 
@@ -1582,7 +1592,8 @@ img.icon {
     }
 
     .artist .pfp {
-        max-height: 125px;
+        height: 125px;
+        width: 125px;
     }
 }
 
